@@ -3,10 +3,8 @@
 - name: install required software on WebServer
   hosts: WebServer #two spaces
   become: true
-
   tasks:
-    - name: install latest version of bat
+    - name: creating a user test
       user:
         name: test
         state: present
-
