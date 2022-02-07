@@ -1,0 +1,12 @@
+--- #start of yml file
+#start with - (dash)
+- name: install required software on WebServer
+  hosts: WebServer #two spaces
+  become: true
+
+  tasks:
+    - name: install latest version of bat
+      user:
+        name: test
+        state: present
+
