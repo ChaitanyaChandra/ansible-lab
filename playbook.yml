@@ -1,35 +1,17 @@
 ---
-# playbook vars have more priority than host_vars and group_vars
-# group_vars > host_vars > playbook_vars
-- name: install required software on WebServer
-  hosts: WebServer #two spaces
-  become: true
+- name:  create multiple users
+  hosts: WebServer
+  become: yes
   vars:
     users:
-      admin:
-        admin_user:
-          uname: chaitanya
-          desc: Test account
-
-#  vars_files:
-#    - vars/user.yml
+      - chaitanya
+      - chandra
+      - chaitu
+      - chay
 
   tasks:
-    - name: creating a user {{ users['admin']['admin_user']['uname'] }}
+    - name: creating users by using loop
       user:
-        name: "{{ users['admin']['admin_user']['uname'] }}"  # while referencing use quotes
-        comment: "{{ users['admin']['admin_user']['desc'] }}"
+        name: "{{ item }}"
         state: present
-
-    - name: load variable form encrypted file
-      include_vars:
-        file: secret
-
-    - name: printing the secret variables
-      debug:
-        msg: "{{ secret }}"
-
-    - name: not printing secreat variables
-      debug:
-        msg: "{{ secret }}"
-      no_log: true # not inside debug
+      loop: "{{ users }}"
