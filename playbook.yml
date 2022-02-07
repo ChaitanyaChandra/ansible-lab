@@ -1,10 +1,31 @@
---- #start of yml file
-#start with - (dash)
+---
+# playbook vars have more priority than host_vars and group_vars
+# group_vars > host_vars > playbook_vars
 - name: install required software on WebServer
   hosts: WebServer #two spaces
   become: true
+  vars:
+    users:
+      admin:
+        admin_user:
+          uname: chaitanya
+          desc: Test account
+
+#  vars_files:
+#    - vars/user.yml
+
   tasks:
-    - name: creating a user test
+    - name: creating a user {{ users['admin']['admin_user']['uname'] }}
       user:
-        name: test
+        name: "{{ users['admin']['admin_user']['uname'] }}"  # while referencing use quotes
+        comment: "{{ users['admin']['admin_user']['desc'] }}"
         state: present
+
+    - name: load variable form encrypted file
+      include_vars:
+        file: secret
+
+    - name: printing the variables
+      debug:
+        msg: "{{ secret }}"
+
