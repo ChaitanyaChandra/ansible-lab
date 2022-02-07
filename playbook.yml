@@ -33,4 +33,3 @@
       debug:
         msg: "{{ secret }}"
       no_log: true # not inside debug
-
