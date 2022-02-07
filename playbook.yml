@@ -25,7 +25,12 @@
       include_vars:
         file: secret
 
-    - name: printing the variables
+    - name: printing the secret variables
       debug:
         msg: "{{ secret }}"
+
+    - name: not printing secreat variables
+      debug:
+        msg: "{{ secret }}"
+      no_log: true
 
