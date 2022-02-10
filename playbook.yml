@@ -8,7 +8,6 @@
       - chandra
       - chaitu
       - chay
-
   tasks:
     - name: creating users by using loop
       user:
