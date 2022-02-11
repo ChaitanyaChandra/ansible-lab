@@ -3,14 +3,23 @@
   hosts: WebServer
   become: yes
   vars:
-    users:
+    web_users:
       - chaitanya
       - chandra
+    db_users:
       - chaitu
       - chay
   tasks:
-    - name: creating users by using loop
+    - name: creating database users  using loop and magic variable
       user:
         name: "{{ item }}"
         state: present
-      loop: "{{ users }}"
+      loop: "{{ web_users }}"
+      when: "'databaseServer' in group_names"
+    - name: creating web users using loop and magic variable
+      user:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ db_users }}"
+      when: "'webServer' in group_names"
+      # magic variable (group_names)
