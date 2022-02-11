@@ -22,4 +22,4 @@
         state: present
       loop: "{{ db_users }}"
       when: "'webServer' in group_names"
-      # magic variable (group_names)
+      # magic variable (group_names)[list of all groups in workspace].
