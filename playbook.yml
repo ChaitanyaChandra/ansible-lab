@@ -19,7 +19,7 @@
     - name: creating web users using loop and magic variable
       user:
         name: "{{ item }}"
-        state: present
+        state: absent
       loop: "{{ db_users }}"
       when: "'WebServer' in group_names"
       # magic variable (group_names)[list of all groups in workspace].
