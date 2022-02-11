@@ -15,7 +15,7 @@
         name: "{{ item }}"
         state: present
       loop: "{{ web_users }}"
-      when: "'databaseServer' in group_names"
+      when: "'databaseServer+++++++++++++' in group_names"
     - name: creating web users using loop and magic variable
       user:
         name: "{{ item }}"
