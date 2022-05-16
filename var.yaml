@@ -13,7 +13,7 @@
 - name: play with var file
   hosts: all
   become: true
-  var_files:
+  vars_files:
     - vars.yaml
   tasks:
     - name: printing vars  from files
