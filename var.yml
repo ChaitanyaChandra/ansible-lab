@@ -6,4 +6,5 @@
     email: chay@outlook.in
   tasks:
     - ansible.builtin.debug:
-        msg: name is - {{ name }} and \n email is - {{ email }}
+        msg: name is - {{ name }} and 
+             email is - {{ email }}
