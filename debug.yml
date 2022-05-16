@@ -10,7 +10,7 @@
       register: result
 
     - ansible.builtin.debug:
-        msg: var:result
+        msg: "result is {{ result }}"
         verbosity: 2
 
     - name: Display all variables/facts known for a host
