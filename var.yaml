@@ -38,4 +38,4 @@
   tasks:
     - name: printing vars  from inventory
       ansible.builtin.debug:
-        msg: "name is - {{ NAME }} "
+        msg: "name is - {{ NAME }} and email is - {{ EMAIL }}"
