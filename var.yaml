@@ -10,12 +10,34 @@
       ansible.builtin.debug:
         msg: "name is - {{ name }} and email is - {{ email }}"
 
-- name: play with var file
+- name: play with tasks vars
+  hosts: all
+  become: true
+  tasks:
+    - name: printing vars  from files
+      vars:
+        name: chaitanya
+        email: chay@outlook.in
+      ansible.builtin.debug:
+        msg: "name is - {{ name }} and email is - {{ email }}"
+        
+- name: play with vars files
   hosts: all
   become: true
   vars_files:
     - vars.yaml
   tasks:
     - name: printing vars  from files
+      ansible.builtin.debug:
+        msg: "name is - {{ name }} and email is - {{ email }}"
+
+
+- name: play with tasks vars files
+  hosts: all
+  become: true
+  tasks:
+    - name: printing vars  from files
+      vars_files:
+        - vars.yaml
       ansible.builtin.debug:
         msg: "name is - {{ name }} and email is - {{ email }}"
