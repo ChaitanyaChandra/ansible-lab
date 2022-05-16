@@ -34,7 +34,6 @@
 
 - name: play with vars form inventory
   hosts: WebServer
-  become: true
   tasks:
     - name: printing vars  from inventory
       ansible.builtin.debug:
