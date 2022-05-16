@@ -5,7 +5,6 @@
   tasks:
     - ansible.builtin.debug:
         msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}
-        when: ansible_default_ipv4.gateway is defined
 
     - ansible.builtin.shell: /usr/bin/uptime
       register: result
