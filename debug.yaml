@@ -10,3 +10,10 @@
 
     - ansible.builtin.debug:
         msg: "{{ result.stdout }}"
+
+    - name: set variable throughout the play
+      ansible.builtin.set_fact:
+        OUT_PUT : "{{ result }}"
+
+    - ansible.builtin.debug:
+        msg: "{{ result.stdout }}"
