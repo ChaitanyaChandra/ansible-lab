@@ -7,7 +7,7 @@
         msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}
 
     - ansible.builtin.command: uptime
-      register: "{{ result }}"
+      register: result
 
     - ansible.builtin.debug:
-        msg: {{ result }}
+        msg: "{{ result }}"
