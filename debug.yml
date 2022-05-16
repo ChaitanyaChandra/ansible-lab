@@ -1,10 +1,8 @@
 # Example that prints the loopback address and gateway for each host
-- name: debug module
-  hosts: all
-  become: true
-   - debug:
-   msg: "System {{ inventory_hostname }} has uuid {{ ansible_product_uuid }}"
-
+- name: Print the gateway for each host when defined
+  ansible.builtin.debug:
+    msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}
+  when: ansible_default_ipv4.gateway is defined
 # - debug:
 #     msg: "System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}"
 #   when: ansible_default_ipv4.gateway is defined
