@@ -1,19 +1,15 @@
-- name: Print the gateway for each host when defined
-  hosts: all
-  become: true
-  tasks:
-    - ansible.builtin.debug:
-        msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}
+- ansible.builtin.debug:
+    msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}
 
-    - ansible.builtin.command: uptime
-      register: result
+- ansible.builtin.command: uptime
+  register: result
 
-    - ansible.builtin.debug:
-        msg: "{{ result.stdout }}"
+- ansible.builtin.debug:
+    msg: "{{ result.stdout }}"
 
-    - name: set variable throughout the play
-      ansible.builtin.set_fact:
-        OUT_PUT : "{{ result }}"
+- name: set variable throughout the play
+  ansible.builtin.set_fact:
+    OUT_PUT : "{{ result }}"
 
-    - ansible.builtin.debug:
-        msg: "{{ result.stdout }}"
+- ansible.builtin.debug:
+    msg: "{{ result.stdout }}"
