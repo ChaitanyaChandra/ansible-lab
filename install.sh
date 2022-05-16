@@ -1,4 +1,4 @@
-sudo python -m pip install ansible
+sudo python3 -m pip install ansible
 
 cat > ~/.ssh/config << EOF
 Host node2
