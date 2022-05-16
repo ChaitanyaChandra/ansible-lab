@@ -6,7 +6,7 @@
     - ansible.builtin.debug:
         msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}
 
-    - ansible.builtin.shell: /usr/bin/uptime
+    - ansible.builtin.shell: uptime
       register: result
 
     - ansible.builtin.debug:
