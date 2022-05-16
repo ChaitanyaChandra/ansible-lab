@@ -33,9 +33,9 @@
 
 
 - name: play with vars form inventory
-  hosts: webserver
+  hosts: WebServerOne
   become: true
   tasks:
     - name: printing vars  from inventory
       ansible.builtin.debug:
-        msg: "name is - {{ NAME }} and email is - {{ EMAIL }}"
+        msg: "name is - {{ NAME }} "
