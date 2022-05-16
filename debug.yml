@@ -6,12 +6,8 @@
     - ansible.builtin.debug:
         msg: System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}
 
-    - ansible.builtin.shell: uptime
+    - ansible.builtin.command: uptime
       register: result
 
     - ansible.builtin.debug:
-        msg: "result is {{ result }}"
-
-    - name: Display all variables/facts known for a host
-      debug:
-        var: hostvars[inventory_hostname]
+        msg: var:result
