@@ -1,0 +1,21 @@
+---
+- name: play for vars
+  hosts: all
+  become: true
+  vars:
+    name: chaitanya
+    email: chay@outlook.in
+  tasks:
+    - name : printing vars
+      ansible.builtin.debug:
+        msg: name is - {{ name }} and email is - {{ email }}
+
+- name: play with var file
+  hosts: all
+  become: true
+  var_files:
+    - vars.yaml
+  tasks:
+    - name: printing vars  from files
+      ansible.builtin.debug:
+        msg: name is - {{ name }} and email is - {{ email }}
