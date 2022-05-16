@@ -1,9 +1,9 @@
 # Example that prints the loopback address and gateway for each host
 - name: debug module
   hosts: all
-  become: yes
-    - debug:
-      msg: "System {{ inventory_hostname }} has uuid {{ ansible_product_uuid }}"
+  become: true
+   - debug:
+   msg: "System {{ inventory_hostname }} has uuid {{ ansible_product_uuid }}"
 
 # - debug:
 #     msg: "System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }}"
