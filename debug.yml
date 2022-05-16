@@ -1,4 +1,3 @@
-# Example that prints the loopback address and gateway for each host
 - name: Print the gateway for each host when defined
   hosts: all
   become: true

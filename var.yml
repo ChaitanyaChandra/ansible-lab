@@ -1,0 +1,9 @@
+- name: play level vars
+  hosts: all
+  become: true
+  vars:
+    name: chaitanya
+    emil: chay@outlook.in
+  tasks:
+    - ansible.builtin.debug:
+        msg: name is - {{ name }}
