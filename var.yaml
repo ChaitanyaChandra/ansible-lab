@@ -8,7 +8,7 @@
   tasks:
     - name : printing vars
       ansible.builtin.debug:
-        msg: name is - {{ name }} and email is - {{ email }}
+        msg: "name is - {{ name }} and email is - {{ email }}"
 
 - name: play with var file
   hosts: all
@@ -18,4 +18,4 @@
   tasks:
     - name: printing vars  from files
       ansible.builtin.debug:
-        msg: name is - {{ name }} and email is - {{ email }}
+        msg: "name is - {{ name }} and email is - {{ email }}"
