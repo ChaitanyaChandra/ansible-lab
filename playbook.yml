@@ -1,6 +1,6 @@
 ---
 - name:  create multiple users
-  hosts: WebServer
+  hosts: all
   become: yes
   vars:
     web_users:
