@@ -10,4 +10,4 @@
       register: result
 
     - ansible.builtin.debug:
-        msg: "{{ result.msg.stdout }}"
+        msg: "result is : {{ result }}"
