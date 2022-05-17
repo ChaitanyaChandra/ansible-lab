@@ -6,41 +6,41 @@ Host node1
   HostName ec2-3-142-210-53.us-east-2.compute.amazonaws.com
   User ec2-user
   Port 22
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/key
   StrictHostKeyChecking no
 Host node2
   HostName ec2-3-136-236-230.us-east-2.compute.amazonaws.com
   User ec2-user
   Port 22
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/key
   StrictHostKeyChecking no
 Host node3
   HostName ec2-3-15-27-69.us-east-2.compute.amazonaws.com
   User ec2-user
   Port 22
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/key
   StrictHostKeyChecking no
 Host node4
   HostName ec2-18-224-110-251.us-east-2.compute.amazonaws.com
   User ec2-user
   Port 22
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/key
   StrictHostKeyChecking no
 Host node5
   HostName ec2-3-16-25-145.us-east-2.compute.amazonaws.com
   User ec2-user
   Port 22
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/key
   StrictHostKeyChecking no
 Host node6
   HostName ec2-18-119-97-123.us-east-2.compute.amazonaws.com
   User ec2-user
   Port 22
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/key
   StrictHostKeyChecking no
 EOF
 
-cat > ~/.ssh/id_rsa << EOF
+cat > ~/.ssh/key << EOF
 -----BEGIN RSA PRIVATE KEY-----
 MIIG5AIBAAKCAYEAtBSYgMPONGLXcOpKBcJvK5AFviP2LK6m8nw90EkaUdl6FOPs
 jqzlD88zW4BrbK3bw/dcE0vA0hzu/wPkDtgS3RtQ0+jjAPOwZNvqmTJYKdyyWs6B
@@ -82,4 +82,4 @@ FWPYu8hZQH0HVK1NFVuOE16EeY6TQark+HutT40m0zUqIrCudXuFkXF+Hc6hPYdF
 -----END RSA PRIVATE KEY-----
 EOF
 
-chmod 400 ~/.ssh/id_rsa 
+chmod 400 ~/.ssh/key
