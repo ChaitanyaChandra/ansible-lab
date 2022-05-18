@@ -3,3 +3,8 @@
   src: "~/.ssh/config"
   dest: "~/.ssh/config"
   mode: '0600'
+- name: Copy private key file
+  ansible.builtin.copy:
+  src: "~/.ssh/key"
+  dest: "~/.ssh/key"
+  mode: '0400'
