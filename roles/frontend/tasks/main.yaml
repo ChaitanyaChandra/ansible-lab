@@ -6,10 +6,9 @@
     state: installed
 
 - name: Unarchive a file that needs to be downloaded
-  ansible.builtin.unarchive:
-    src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
-    dest: /tmp
-    remote_src: yes
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: download
 
 - name: delete files in nginx dir
   ansible.builtin.file:

@@ -1,0 +1,6 @@
+# common task is used to make code dry
+- name: download and unzip the file for {{COMPONENT}}
+  ansible.builtin.unarchive:
+    src: https://github.com/roboshop-devops-project/{{COMPONENT}}/archive/main.zip
+    dest: /tmp/
+    remote_src: yes

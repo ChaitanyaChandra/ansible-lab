@@ -1,0 +1,6 @@
+- name: mongodb installation
+  become: yes
+  hosts: MONGODB
+  roles:
+    - link
+    - mongodb
