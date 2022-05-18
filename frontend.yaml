@@ -1,4 +1,6 @@
 - name: setup frontend
+  become: yes
   hosts: all
   roles:
     - frontend
+    - link

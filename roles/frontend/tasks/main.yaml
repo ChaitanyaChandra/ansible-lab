@@ -1,5 +1,20 @@
 - name: Install a list of packages
-  yum:
+  ansible.builtin.yum:
     name:
       - nginx
+      - unzip
     state: installed
+- name: Unarchive a file that needs to be downloaded
+  ansible.builtin.unarchive:
+    src: https://github.com/roboshop-devops-project/frontend/archive/main.zip
+    dest: /tmp
+    remote_src: yes
+- name: delete files in ngnix dir
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: absent
+- name: Copy files to ngenix dir
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static/
+    dest: /usr/share/nginx/html/
+    remote_src: yes
