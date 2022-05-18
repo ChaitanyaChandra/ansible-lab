@@ -11,12 +11,12 @@
     dest: /tmp
     remote_src: yes
 
-- name: delete files in ngnix dir
+- name: delete files in nginx dir
   ansible.builtin.file:
     path: /usr/share/nginx/html
     state: absent
 
-- name: Copy files to ngenix dir
+- name: Copy files to nginx dir
   ansible.builtin.copy:
     src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html/
@@ -25,10 +25,10 @@
 - name: Copy roboshop reverse proxy configuration
   ansible.builtin.copy:
     src: roboshop.conf
-    dest: /etc/ngnix/default.d/roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf
 
-- name: start and enable ngnix service
+- name: start and enable nginx service
   ansible.builtin.systemd:
     state: restarted
     enabled: yes
-    name: ngnix
+    name: nginx
