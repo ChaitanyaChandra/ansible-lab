@@ -2,9 +2,9 @@
   ansible.builtin.yum:
     name:
       - unzip
-      - nodejs
       - make
       - gcc-c++
+      - nodejs
     state: installed
 
 - name: create user roboshop
