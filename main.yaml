@@ -9,6 +9,7 @@
 - name: mongodb installation
   become: yes
   hosts: MONGODB
+  tags: mongodb
   roles:
     - link
     - mongodb
