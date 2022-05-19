@@ -4,6 +4,7 @@
   tags: frontend
   roles:
     - link
+    - frontend
 
 - name: mongodb installation
   become: yes
