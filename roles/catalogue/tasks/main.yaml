@@ -1,6 +1,7 @@
 - name: install nodejs, make , gcc-c++
   ansible.builtin.yum:
     name:
+      - unzip
       - nodejs
       - make
       - gcc-c++
