@@ -13,3 +13,11 @@
   roles:
     - link
     - mongodb
+
+- name: catalague setup
+  become: yes
+  hosts: CATALOGUE
+  tags: catalogue
+  roles:
+    - catalogue
+    - link
