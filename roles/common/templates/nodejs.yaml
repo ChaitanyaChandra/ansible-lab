@@ -1,0 +1,59 @@
+- name: install nodejs, make , gcc-c++
+  ansible.builtin.yum:
+    name:
+      - unzip
+      - make
+      - gcc-c++
+      - nodejs
+    state: installed
+
+- name: create user roboshop
+  ansible.builtin.user:
+    name: roboshop
+    state: present
+
+- name: download nodejs files
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: download
+
+# delete previous nodejs files
+- name: check {{ COMPONENT }} exists
+  stat: path=/tmp/{{ COMPONENT }}
+  register: myfile_stat
+- name: if {{ COMPONENT }} exists delete
+  command: rm -rf /tmp/{{ COMPONENT }}
+  when: myfile_stat.stat.exists
+
+# move the file if exists
+- name: check {{ COMPONENT }}-main if exists
+  stat: path=/tmp/{{ COMPONENT }}-main
+  register: file_stat
+- name: if {{ COMPONENT }}-main exists remane to {{COMPONENT}}
+  command: mv /tmp/{{ COMPONENT }}-main /tmp/{{ COMPONENT }}
+  when: file_stat.stat.exists
+
+# copy files to home dir
+- name: copy files to home dir
+  ansible.builtin.copy:
+    src: /tmp/{{ COMPONENT }}
+    dest: /home/roboshop/
+    remote_src: yes
+
+# npm install
+- name: npm install
+  community.general.npm:
+    path: /home/roboshop/{{ COMPONENT }}/
+
+# mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+- name: copy {{ COMPONENT }} config template
+  ansible.builtin.template:
+    src: systemd.service
+    dest: /etc/systemd/system/{{ COMPONENT }}.service
+
+- name: Enable service httpd and ensure it is not masked
+  ansible.builtin.systemd:
+    name: {{ COMPONENT }}
+    enabled: yes
+    state: started
+    daemon_reload: yes

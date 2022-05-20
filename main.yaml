@@ -29,3 +29,10 @@
   roles:
     - link
     - redis
+
+- name: user setup
+  become: yes
+  hosts: USER
+  tags: user
+  roles:
+    - user
