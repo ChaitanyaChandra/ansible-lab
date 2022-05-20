@@ -2,19 +2,25 @@
 # yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
 # yum-config-manager --enable remi
 # yum install redis -y
+# curl -L https://raw.githubusercontent.com/roboshop-devops-project/redis/main/redis.repo -o /etc/yum.repos.d/redis.repo
+# yum install redis -y
 
 - name: install repo
   ansible.builtin.yum_repository:
     name:
-      - remi-release-7
+      - redis
     description: custom repositories
-    baseurl: https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    baseurl: https://raw.githubusercontent.com/roboshop-devops-project/redis/main/redis.repo
 
 - name: install release
   ansible.builtin.yum:
     name:
       - epel-release
       - yum-utils
-      - https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-    state: installed
+    state: absent
 
+- name: install redis
+  ansible.builtin.yum:
+    name:
+      - redis
+    state: present
