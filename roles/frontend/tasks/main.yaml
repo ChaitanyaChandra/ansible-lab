@@ -5,26 +5,26 @@
       - unzip
     state: absent
 
-- name: Unarchive a file that needs to be downloaded
-  ansible.builtin.import_role:
-    name: common
-    tasks_from: download
-
-- name: delete files in nginx dir
-  ansible.builtin.file:
-    path: /usr/share/nginx/html
-    state: absent
-
-- name: Copy files to nginx dir
-  ansible.builtin.copy:
-    src: /tmp/frontend-main/static/
-    dest: /usr/share/nginx/html/
-    remote_src: yes
-
-- name: Copy roboshop reverse proxy configuration
-  ansible.builtin.template:
-    src: roboshop.conf
-    dest: /etc/nginx/default.d/roboshop.conf
+#- name: Unarchive a file that needs to be downloaded
+#  ansible.builtin.import_role:
+#    name: common
+#    tasks_from: download
+#
+#- name: delete files in nginx dir
+#  ansible.builtin.file:
+#    path: /usr/share/nginx/html
+#    state: absent
+#
+#- name: Copy files to nginx dir
+#  ansible.builtin.copy:
+#    src: /tmp/frontend-main/static/
+#    dest: /usr/share/nginx/html/
+#    remote_src: yes
+#
+#- name: Copy roboshop reverse proxy configuration
+#  ansible.builtin.template:
+#    src: roboshop.conf
+#    dest: /etc/nginx/default.d/roboshop.conf
 
 #- name: start and enable nginx service
 #  ansible.builtin.systemd:
