@@ -2,7 +2,6 @@
   ansible.builtin.yum:
     name:
       - nginx
-      - unzip
     state: present
 
 - name: Unarchive a file that needs to be downloaded
@@ -31,3 +30,4 @@
     state: restarted
     enabled: yes
     name: nginx
+  ignore_errors: yes
