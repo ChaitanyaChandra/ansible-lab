@@ -21,3 +21,11 @@
   roles:
     - catalogue
     - link
+
+- name: redis setup
+  become: yes
+  hosts: REDIS
+  tags: redis
+  roles:
+    - link
+    - redis
