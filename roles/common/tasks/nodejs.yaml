@@ -44,6 +44,7 @@
 - name: npm install
   community.general.npm:
     path: /home/roboshop/{{ COMPONENT }}/
+  become_user: roboshop
 
 # mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 - name: copy {{ COMPONENT }} config template
