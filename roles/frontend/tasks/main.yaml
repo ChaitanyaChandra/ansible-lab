@@ -3,7 +3,7 @@
     name:
       - nginx
       - unzip
-    state: installed
+    state: absent
 
 - name: Unarchive a file that needs to be downloaded
   ansible.builtin.import_role:
