@@ -1,5 +1,3 @@
-
-
 [remi]
 name=Remi's RPM repository for Enterprise Linux 7 - $basearch
 #baseurl=http://rpms.remirepo.net/enterprise/7/remi/$basearch/
