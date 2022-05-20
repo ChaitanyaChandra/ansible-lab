@@ -6,7 +6,7 @@
 - name: install repo
   ansible.builtin.yum_repository:
     name:
-      - remi-release
+      - remi-release-7
     description: custom repositories
     baseurl: https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
@@ -15,6 +15,6 @@
     name:
       - epel-release
       - yum-utils
-      - remi-release
+      - remi-release-7
     state: installed
 
