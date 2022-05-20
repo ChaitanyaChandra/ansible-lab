@@ -53,7 +53,7 @@
 
 - name: Enable service httpd and ensure it is not masked
   ansible.builtin.systemd:
-    name: {{ COMPONENT }}
+    name: "{{ COMPONENT }}"
     enabled: yes
     state: started
     daemon_reload: yes
