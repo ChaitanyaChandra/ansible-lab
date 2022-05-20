@@ -51,7 +51,7 @@
     src: systemd.service
     dest: /etc/systemd/system/{{ COMPONENT }}.service
 
-- name: Enable service httpd and ensure it is not masked
+- name: Enable and start service with demon_reload
   ansible.builtin.systemd:
     name: "{{ COMPONENT }}"
     enabled: yes
