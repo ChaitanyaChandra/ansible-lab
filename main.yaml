@@ -1,3 +1,11 @@
+- name: setup work_station
+  become: yes
+  hosts: work_station
+  tags: work_station
+  roles:
+    - link
+
+
 - name: setup frontend
   become: yes
   hosts: FRONTEND

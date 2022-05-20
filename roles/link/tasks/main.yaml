@@ -1,12 +1,12 @@
 - name: Copy config file
   become: false
   ansible.builtin.copy:
-    src: config
+    src: ~/.ssh/config
     dest: ~/.ssh/config
     mode: '0600'
 - name: Copy private key file
   become: false
   ansible.builtin.copy:
-    src: key
+    src: ~/.ssh/key
     dest: ~/.ssh/key
     mode: '0400'
