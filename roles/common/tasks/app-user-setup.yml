@@ -1,0 +1,41 @@
+- name: Add Application User
+  ansible.builtin.user:
+    name: roboshop
+  register: app_user_info
+
+- name: Download and UnZip the {{COMPONENT}} Content
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: download
+
+## This is been added for deployment purpose , For first time when component is setup then it might fail, So lets ignore the failure
+- name: Stop {{COMPONENT}} Service
+  ansible.builtin.systemd:
+    name: "{{COMPONENT}}"
+    state: stopped
+  ignore_errors: yes
+
+- name: Remove Old App Content
+  ansible.builtin.file:
+    path: /home/roboshop/{{COMPONENT}}
+    state: absent
+
+- name: Create App Dir
+  ansible.builtin.file:
+    path: /home/roboshop/{{COMPONENT}}
+    state: directory
+  become_user: roboshop
+
+#- name: Copy App Content
+#  ansible.builtin.copy:
+#    src: /tmp/{{COMPONENT}}-main/
+#    dest: /home/roboshop/{{COMPONENT}}/
+#    remote_src: yes
+#  become_user: roboshop
+
+- name: Unzip {{COMPONENT}}
+  ansible.builtin.unarchive:
+    src: /tmp/{{COMPONENT}}-{{APP_VERSION}}.zip
+    dest: /home/roboshop/{{COMPONENT}}/
+    remote_src: yes
+  become_user: roboshop

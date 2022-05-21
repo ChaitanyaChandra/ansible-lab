@@ -1,4 +1,0 @@
-- name: printing the debug values using roles
-  hosts: all
-  roles:
-    - debug
