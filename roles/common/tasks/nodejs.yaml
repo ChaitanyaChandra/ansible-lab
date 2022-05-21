@@ -41,9 +41,9 @@
     remote_src: yes
 
 # npm install
-- name: npm install
+- name: Install NodejS Dependencies.
   community.general.npm:
-    path: /home/roboshop/{{ COMPONENT }}/
+    path: /home/roboshop/{{COMPONENT}}
   become_user: roboshop
 
 # mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
