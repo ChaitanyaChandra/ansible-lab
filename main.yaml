@@ -1,9 +1,9 @@
-- name: setup work_station
-  become: yes
-  hosts: work_station
-  tags: work_station
-  roles:
-    - link
+#- name: setup work_station
+#  become: yes
+#  hosts: work_station
+#  tags: work_station
+#  roles:
+#    - link
 
 
 - name: setup frontend
@@ -27,8 +27,8 @@
   hosts: CATALOGUE
   tags: catalogue
   roles:
-    - catalogue
     - link
+    - catalogue
 
 - name: redis setup
   become: yes
