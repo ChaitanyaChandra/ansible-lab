@@ -1,10 +1,9 @@
-- name: install nodejs, make , gcc-c++
+- name: Install NodeJS Service
   ansible.builtin.yum:
     name:
-      - unzip
+      - nodejs
       - make
       - gcc-c++
-      - nodejs
     state: installed
 
 - name: create user roboshop
