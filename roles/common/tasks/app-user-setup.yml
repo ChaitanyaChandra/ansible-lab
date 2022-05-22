@@ -26,16 +26,16 @@
     state: directory
   become_user: roboshop
 
-#- name: Copy App Content
-#  ansible.builtin.copy:
-#    src: /tmp/{{COMPONENT}}-main/
-#    dest: /home/roboshop/{{COMPONENT}}/
-#    remote_src: yes
-#  become_user: roboshop
-
-- name: Unzip {{COMPONENT}}
-  ansible.builtin.unarchive:
-    src: /tmp/{{COMPONENT}}-{{APP_VERSION}}.zip
+- name: Copy App Content
+  ansible.builtin.copy:
+    src: /tmp/{{COMPONENT}}-main/
     dest: /home/roboshop/{{COMPONENT}}/
     remote_src: yes
   become_user: roboshop
+
+#- name: Unzip {{COMPONENT}}
+#  ansible.builtin.unarchive:
+#    src: /tmp/{{COMPONENT}}-{{APP_VERSION}}.zip
+#    dest: /home/roboshop/{{COMPONENT}}/
+#    remote_src: yes
+#  become_user: roboshop
