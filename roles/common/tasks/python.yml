@@ -28,5 +28,3 @@
 
 - name: Setup Service and Start Service
   import_tasks: systemd.yml
-
-
