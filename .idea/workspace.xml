@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="" />
+    <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,7 +31,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -37,7 +46,8 @@
       <option name="presentableId" value="Default" />
       <updated>1652979067697</updated>
       <workItem from="1652979069055" duration="13215000" />
-      <workItem from="1653032928260" duration="20029000" />
+      <workItem from="1653032928260" duration="21049000" />
+      <workItem from="1653211620742" duration="158000" />
     </task>
     <servers />
   </component>
@@ -60,5 +70,19 @@
       <path value="$PROJECT_DIR$/Profile" />
       <path value="$PROJECT_DIR$/ansible" />
     </ignored-roots>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="ansible-lab" type="b2602c69:ProjectViewProjectNode" />
+        <item name="ansible-lab" type="462c0819:PsiDirectoryNode" />
+      </path>
+      <path>
+        <item name="ansible-lab" type="b2602c69:ProjectViewProjectNode" />
+        <item name="ansible-lab" type="462c0819:PsiDirectoryNode" />
+        <item name="roles" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
   </component>
 </project>
