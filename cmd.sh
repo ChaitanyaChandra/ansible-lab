@@ -7,3 +7,4 @@ git pull ; ansible-playbook roboshop.yml  \
 # -e env var
 # -i inventory
 
+ git pull ; ansible-playbook roboshop.yml  -e ENV=dev -e GIT_DOWNLOAD=yes
