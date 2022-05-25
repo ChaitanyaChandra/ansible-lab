@@ -5,7 +5,6 @@ app = ["mongodb", "redis", "rabbitmq", "mysql", "catalogue", "user", "cart", "sh
        "frontend"]
 env = "dev"
 domain = "roboshop.internal."
-
 new_list = []  # fqdn
 
 for item in app:
