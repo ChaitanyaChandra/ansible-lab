@@ -13,6 +13,7 @@
     apps:
       - jenkins
       - firewalld
+      - git
   tasks:
     - name: Ensure Jenkins Repository is Installed
       yum_repository:
