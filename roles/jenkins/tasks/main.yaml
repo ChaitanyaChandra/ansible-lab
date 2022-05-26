@@ -1,5 +1,5 @@
 - name: Ensure Jenkins Repository is Installed
-  yum_repository:
+  ansible.builtin.yum_repository:
     name: jenkins
     state: present
     description: Official Jenkins Yum Repo
@@ -8,7 +8,7 @@
     gpgcheck: yes
     enabled: yes
 - name: Ensure java & Jenkins is Installed
-  yum :
+  ansible.builtin.yum :
     name:
       - java-11-openjdk
       - jenkins
