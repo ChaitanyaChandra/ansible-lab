@@ -54,7 +54,6 @@
   ansible.builtin.template:
     src: jenkins.conf
     dest: /etc/nginx/default.d/jenkins.conf
-    state: present
 
 - name: restart Service
   loop: "{{ apps }}"
