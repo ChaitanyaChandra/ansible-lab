@@ -1,5 +1,5 @@
 - name: Set Hostname
-  ansible.builtin.shell: set-hostname {{COMPONENT}}-{{ENV}}
+  ansible.builtin.shell:  hostnamectl set-hostname {{COMPONENT}}-{{ENV}}
 
 - name: Ensure Jenkins Repository is Installed
   ansible.builtin.yum_repository:
