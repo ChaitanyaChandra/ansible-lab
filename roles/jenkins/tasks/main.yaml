@@ -1,12 +1,10 @@
 - name: Set Hostname
   ansible.builtin.shell:  hostnamectl set-hostname {{COMPONENT}}-{{ENV}}
 
-- name: Ensure Jenkins Repository is Installed
-  ansible.builtin.yum_repository:
-    description: jenkins repo
-    name: jenkins
-    baseurl: https://pkg.jenkins.io/redhat-stable/jenkins.repo
-    gpgkey: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+- name: Copy jenkins Repo
+  copy:
+    src: jenkins.repo
+    dest: /etc/yum.repos.d/jenkins.repo
 
 - name: Ensure java & Jenkins is Installed
   ansible.builtin.yum :
@@ -17,12 +15,12 @@
       - ngnix
     state: installed
 
-#- name: Enable and Start the Service
-#  loop: "{{ apps }}"
-#  ansible.builtin.systemd:
-#    name: "{{ item }}"
-#    enabled: yes
-#    state: started
+- name: Enable and Start the Service
+  loop: "{{ apps }}"
+  ansible.builtin.systemd:
+    name: "{{ item }}"
+    enabled: yes
+    state: started
 
 #- name: init jenkins with groovy scripts
 #  loop: "{{ scripts }}"
