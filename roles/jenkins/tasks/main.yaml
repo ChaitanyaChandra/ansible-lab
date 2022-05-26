@@ -5,12 +5,12 @@
   copy:
     src: jenkins.repo
     dest: /etc/yum.repos.d/jenkins.repo
-    state: "{{ mystate }}"
+    state: present
 
 - name: Install EPEL repo
   yum:
     name: epel-release
-    state: "{{ mystate }}"
+    state: present
 
 - name: Ensure java & Jenkins is Installed
   ansible.builtin.yum :
@@ -27,7 +27,6 @@
     path: /var/lib/jenkins/init.groovy.d/
     state: directory
     mode: '0755'
-    state: "{{ mystate }}"
 
 - name: init jenkins with groovy scripts
   loop: "{{ scripts }}"
@@ -42,7 +41,6 @@
   ansible.builtin.copy:
     src: "{{ item }}"
     dest: /etc/nginx/{{ item }}
-    state: "{{ mystate }}"
 
 - name: current enforce(getenforce) 'Enforcing'
   ansible.builtin.shell:
