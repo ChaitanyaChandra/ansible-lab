@@ -7,14 +7,14 @@
     gpgkey: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
     gpgcheck: yes
     enabled: yes
-- name: Ensure java & Jenkins is Installed
-  ansible.builtin.yum :
-    name:
-      - java-11-openjdk
+#- name: Ensure java & Jenkins is Installed
+#  ansible.builtin.yum :
+#    name:
+#      - java-11-openjdk
 #      - jenkins
-      - git
-      - ngnix
-    state: present
+#      - git
+#      - ngnix
+#    state: present
 
 #- name: Enable and Start the Service
 #  loop: "{{ apps }}"
