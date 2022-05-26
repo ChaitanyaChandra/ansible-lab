@@ -1,2 +1,9 @@
 USER_NAME : chaitu
 PASSWORD: "@123Chaitu"
+apps:
+  - jenkins
+  - nginx
+
+scripts:
+  - admin_setup.groovy
+  - plugins.groovy
