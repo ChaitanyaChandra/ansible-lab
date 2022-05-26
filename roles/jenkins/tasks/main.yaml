@@ -48,7 +48,7 @@
 - name: Copy reverse proxy configuration
   ansible.builtin.template:
     src: jenkins.conf
-    dest: /etc/nginx/default.d/jenkins.conf
+    dest: /etc/nginx/nginx.conf
 
 - name: restart Service
   loop: "{{ apps }}"

@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roles/jenkins/tasks/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/jenkins/tasks/main.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roles/jenkins/templates/jenkins.conf" beforeDir="false" afterPath="$PROJECT_DIR$/roles/jenkins/templates/jenkins.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/jenkins/vars/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/jenkins/vars/main.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
       <workItem from="1653032928260" duration="21049000" />
       <workItem from="1653211620742" duration="10406000" />
       <workItem from="1653388561735" duration="6328000" />
-      <workItem from="1653418678486" duration="36787000" />
+      <workItem from="1653418678486" duration="37112000" />
     </task>
     <servers />
   </component>
