@@ -23,14 +23,14 @@
     enabled: yes
     state: started
 
-- name: init jenkins with groovy scripts
-  loop: "{{ scripts }}"
-  ansible.builtin.templates:
-    src: "{{ item }}"
-    dest: /var/lib/jenkins/init.groovy.d/{{ item }}
-
-- name: restart Service
-  loop: "{{ apps }}"
-  ansible.builtin.systemd:
-    name: "{{ item }}"
-    state: restarted
+#- name: init jenkins with groovy scripts
+#  loop: "{{ scripts }}"
+#  ansible.builtin.templates:
+#    src: "{{ item }}"
+#    dest: /var/lib/jenkins/init.groovy.d/{{ item }}
+#
+#- name: restart Service
+#  loop: "{{ apps }}"
+#  ansible.builtin.systemd:
+#    name: "{{ item }}"
+#    state: restarted
