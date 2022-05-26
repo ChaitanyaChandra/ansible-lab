@@ -38,7 +38,12 @@
   ansible.builtin.template:
     src: "{{ item }}"
     dest: /var/lib/jenkins/init.groovy.d/{{ item }}
-    register:
+
+- name: copy_cert
+  loop: "{{ cert }}"
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: /etc/nginx/{{ item }}
 
 - name: Copy reverse proxy configuration
   ansible.builtin.template:

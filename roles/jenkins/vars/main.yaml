@@ -10,3 +10,7 @@ scripts:
 
 COMPONENT: jenkins
 ENV: dev
+
+cert:
+  - server.crt
+  - server.key
