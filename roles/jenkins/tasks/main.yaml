@@ -39,8 +39,13 @@
     src: "{{ item }}"
     dest: /var/lib/jenkins/init.groovy.d/{{ item }}
 
-#- name: restart Service
-#  loop: "{{ apps }}"
-#  ansible.builtin.systemd:
-#    name: "{{ item }}"
-#    state: restarted
+#- name: Copy jenkins Repo
+#  copy:
+#    src: jenkins.repo
+#    dest: /etc/yum.repos.d/jenkins.repo
+
+- name: restart Service
+  loop: "{{ apps }}"
+  ansible.builtin.systemd:
+    name: "{{ item }}"
+    state: restarted
