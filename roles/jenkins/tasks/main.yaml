@@ -19,13 +19,7 @@
       - git
       - nginx
     state: latest
-
-- name: Enable and Start the Service
-  loop: "{{ apps }}"
-  ansible.builtin.systemd:
-    name: "{{ item }}"
-    enabled: yes
-    state: started
+  notify: Enable and Start the Service
 
 - name: Create a init.groovy.d directory if it does not exist
   ansible.builtin.file:

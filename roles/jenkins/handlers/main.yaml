@@ -8,3 +8,10 @@
   ansible.builtin.systemd:
     name: nginx
     state: restarted
+
+- name: Enable and Start the Service
+  loop: "{{ apps }}"
+  ansible.builtin.systemd:
+    name: "{{ item }}"
+    enabled: yes
+    state: started
