@@ -14,7 +14,7 @@
       - jenkins
       - git
       - nginx
-    state: installed
+    state: latest
 
 - name: Enable and Start the Service
   loop: "{{ apps }}"
