@@ -42,7 +42,7 @@
 
 - name: Copy reverse proxy configuration
   ansible.builtin.template:
-    src: ngnix.conf
+    src: nginx.conf
     dest: /etc/nginx/default.d/ngnix.conf
 
 - name: restart Service
