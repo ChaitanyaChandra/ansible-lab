@@ -7,3 +7,6 @@ apps:
 scripts:
   - admin_setup.groovy
   - plugins.groovy
+
+COMPONENT: jenkins
+ENV: dev
