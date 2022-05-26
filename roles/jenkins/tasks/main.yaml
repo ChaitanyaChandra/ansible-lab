@@ -6,7 +6,7 @@
     description: jenkins repo
     name: jenkins
     baseurl: https://pkg.jenkins.io/redhat-stable/jenkins.repo
-    gpgkey: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+    gpgkey: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 
 - name: Ensure java & Jenkins is Installed
   ansible.builtin.yum :
