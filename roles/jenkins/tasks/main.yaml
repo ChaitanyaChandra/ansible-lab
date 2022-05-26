@@ -40,6 +40,10 @@
     src: "{{ item }}"
     dest: /etc/nginx/{{ item }}
 
+- name: current enforce(getenforce) 'Enforcing'
+  ansible.builtin.shell:
+    cmd: setenforce Permissive
+
 - name: Copy reverse proxy configuration
   ansible.builtin.template:
     src: jenkins.conf
