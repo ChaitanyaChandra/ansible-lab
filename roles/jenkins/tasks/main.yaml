@@ -29,7 +29,7 @@
 
 - name: init jenkins with groovy scripts
   loop: "{{ scripts }}"
-  ansible.builtin.templates:
+  ansible.builtin.template:
     src: "{{ item }}"
     dest: /var/lib/jenkins/init.groovy.d/{{ item }}
 
