@@ -14,5 +14,3 @@ ENV: dev
 cert:
   - server.crt
   - server.key
-
-mystate: absent
