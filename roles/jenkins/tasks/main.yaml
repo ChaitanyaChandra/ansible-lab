@@ -32,6 +32,6 @@
       - plugins.groovy
   loop: "{{ scripts }}"
   ansible.builtin.templates:
-    src: {{ item }}
+    src: "{{ item }}"
     dest: /var/lib/jenkins/init.groovy.d/{{ item }}
   notify: restart jenkins
