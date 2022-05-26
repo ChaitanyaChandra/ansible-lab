@@ -15,8 +15,8 @@
       - git
       - ngnix
     state: present
-- name: Enable and Start the Service
-  loop: "{{ apps }}"
+#- name: Enable and Start the Service
+- loop: "{{ apps }}"
   service:
     name: "{{ item }}"
   enabled: yes
