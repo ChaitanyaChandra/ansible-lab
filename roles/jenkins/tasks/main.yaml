@@ -17,10 +17,12 @@
     state: present
 
 - name: Enable and Start the Service
-  service:
-    name: jenkins
+  loop: "{{ apps }}"
+  ansible.builtin.systemd:
+    name: "{{ item }}"
     enabled: yes
     state: started
+
 #- name: Enable and Start the Service
 #  loop: "{{ apps }}"
 #  service:
