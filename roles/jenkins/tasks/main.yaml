@@ -15,12 +15,15 @@
       - git
       - ngnix
     state: present
-#- name: Enable and Start the Service
-- loop: "{{ apps }}"
+
+- name: Enable and Start the Service
   service:
-    name: "{{ item }}"
+    name:
+     - jenkins
+     - nginx
   enabled: yes
   state: started
+
 - name: init jenkins with groovy scripts
   loop: "{{ scripts }}"
   ansible.builtin.templates:
