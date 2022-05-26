@@ -11,17 +11,17 @@
   ansible.builtin.yum :
     name:
       - java-11-openjdk
-      - jenkins
+#      - jenkins
       - git
       - ngnix
     state: present
 
-- name: Enable and Start the Service
-  loop: "{{ apps }}"
-  ansible.builtin.systemd:
-    name: "{{ item }}"
-    enabled: yes
-    state: started
+#- name: Enable and Start the Service
+#  loop: "{{ apps }}"
+#  ansible.builtin.systemd:
+#    name: "{{ item }}"
+#    enabled: yes
+#    state: started
 
 #- name: init jenkins with groovy scripts
 #  loop: "{{ scripts }}"
