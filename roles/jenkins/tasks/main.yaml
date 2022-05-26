@@ -6,10 +6,14 @@
     src: jenkins.repo
     dest: /etc/yum.repos.d/jenkins.repo
 
+- name: Install EPEL repo
+  yum:
+    name: epel-release
+    state: present
+
 - name: Ensure java & Jenkins is Installed
   ansible.builtin.yum :
     name:
-      - epel-release # for ngnix
       - java-11-openjdk
       - jenkins
       - git
