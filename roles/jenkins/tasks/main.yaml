@@ -27,6 +27,12 @@
     enabled: yes
     state: started
 
+- name: Create a init.groovy.d directory if it does not exist
+  ansible.builtin.file:
+    path: /var/lib/jenkins/init.groovy.d/
+    state: directory
+    mode: '0755'
+
 - name: init jenkins with groovy scripts
   loop: "{{ scripts }}"
   ansible.builtin.template:
