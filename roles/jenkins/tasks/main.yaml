@@ -23,13 +23,6 @@
     enabled: yes
     state: started
 
-#- name: Enable and Start the Service
-#  loop: "{{ apps }}"
-#  service:
-#    name: "{{ item }}"
-#    enabled: yes
-#    state: started
-
 - name: init jenkins with groovy scripts
   loop: "{{ scripts }}"
   ansible.builtin.templates:
