@@ -50,4 +50,4 @@
   ansible.builtin.systemd:
     name: "{{ item }}"
     state: restarted
-    ignore_errors: yes
+  ignore_errors: yes
