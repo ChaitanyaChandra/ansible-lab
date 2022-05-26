@@ -45,10 +45,15 @@
     src: "{{ item }}"
     dest: /etc/nginx/{{ item }}
 
+- name: Copy Nignx Main Config
+  ansible.builtin.template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
 - name: Copy reverse proxy configuration
   ansible.builtin.template:
     src: jenkins.conf
-    dest: /etc/nginx/conf.d/jenkins.conf
+    dest: /etc/nginx/default.d/jenkins.conf
     state: present
 
 - name: restart Service
