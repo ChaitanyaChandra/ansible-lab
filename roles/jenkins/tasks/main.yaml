@@ -38,6 +38,7 @@
   ansible.builtin.template:
     src: "{{ item }}"
     dest: /var/lib/jenkins/init.groovy.d/{{ item }}
+  notify: restart jenkins Service
 
 - name: copy_cert
   loop: "{{ cert }}"
@@ -49,10 +50,4 @@
   ansible.builtin.template:
     src: jenkins.conf
     dest: /etc/nginx/nginx.conf
-
-- name: restart Service
-  loop: "{{ apps }}"
-  ansible.builtin.systemd:
-    name: "{{ item }}"
-    state: restarted
-  ignore_errors: yes
+  notify: restart nginx Service
