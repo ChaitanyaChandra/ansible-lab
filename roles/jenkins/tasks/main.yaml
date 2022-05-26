@@ -35,4 +35,3 @@
     src: {{ item }}
     dest: /var/lib/jenkins/init.groovy.d/{{ item }}
   notify: restart jenkins
-
