@@ -13,7 +13,7 @@
       - java-11-openjdk
       - jenkins
       - git
-      - ngnix
+      - nginx
     state: installed
 
 - name: Enable and Start the Service
