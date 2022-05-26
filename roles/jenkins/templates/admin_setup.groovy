@@ -1,6 +1,7 @@
 /*
  * Create an admin user.
  */
+
 import jenkins.model.*
 import hudson.security.*
 

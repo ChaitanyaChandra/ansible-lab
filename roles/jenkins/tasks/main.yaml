@@ -19,7 +19,7 @@
       - jenkins
       - git
       - nginx
-    state: "{{ mystate }}"
+    state: present
   notify: Enable and Start the Service
 
 - name: Create a init.groovy.d directory if it does not exist
@@ -33,7 +33,6 @@
   ansible.builtin.template:
     src: "{{ item }}"
     dest: /var/lib/jenkins/init.groovy.d/{{ item }}
-    state: "{{ mystate }}"
   notify: restart jenkins Service
 
 - name: copy_cert
@@ -50,5 +49,4 @@
   ansible.builtin.template:
     src: jenkins.conf
     dest: /etc/nginx/conf.d/jenkins.conf
-    state: "{{ mystate }}"
   notify: restart nginx Service
