@@ -17,12 +17,11 @@
     state: present
 
 - name: Enable and Start the Service
+  loop: "{{ apps }}"
   service:
-    name:
-     - jenkins
-     - nginx
-  enabled: yes
-  state: started
+    name: "{{ item }}"
+    enabled: yes
+    state: started
 
 - name: init jenkins with groovy scripts
   loop: "{{ scripts }}"
