@@ -26,10 +26,10 @@ dns_records = route53.list_resource_record_sets(HostedZoneId=res_dict[domain])
 for item in dns_records['ResourceRecordSets']:
     if item['Type'] == 'A':
         if item['Name'] in new_list:
-            current_dns[item['Name'].replace(sub, "")] = item['Name']
+            current_dns[item['Name'].replace(sub, "")] = item['Name'].strip('.')
 
 print(current_dns)
-with open('~/.ssh/config', 'w') as outfile:
+with open('conf', 'w') as outfile:
     for key, value in current_dns.items():
         outfile.write(f'''
 Host {key} { value }
