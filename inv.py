@@ -3,6 +3,9 @@ import json
 import os
 
 region = 'us-east-1'
+
+os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
+
 route53 = boto3.client('route53')
 app = ["mongodb", "redis", "rabbitmq", "mysql", "catalogue", "user", "cart", "shipping", "payment", "dispatch",
        "frontend"]
