@@ -1,4 +1,7 @@
 import boto3
+import json
+import os
+
 region = 'us-east-1'
 route53 = boto3.client('route53')
 app = ["mongodb", "redis", "rabbitmq", "mysql", "catalogue", "user", "cart", "shipping", "payment", "dispatch",
@@ -26,8 +29,36 @@ for item in dns_records['ResourceRecordSets']:
         if item['Name'] in new_list:
             current_dns[item['Name'].replace(sub, "").upper()] = item['Name'].strip('.')
 
-print(current_dns)
+# print(current_dns)
+# creating inv file
 with open('roboshop.inv', 'w') as outfile:
     for key, value in current_dns.items():
-        outfile.write(f'[{key}]\n')
-        outfile.write(f'{value}\n')
+        outfile.write(f'[{ key }]\n')
+        outfile.write(f'{ value }\n')
+
+# get key and user_name form secret manager
+client = boto3.client('secretsmanager')
+secret = client.get_secret_value(
+    SecretId='ec2_private_key'
+)
+json_res = json.loads(secret['SecretString'])  # convert total string to dict/json
+key = json_res['KEY']
+user_name = json_res['USER_NAME']
+
+# creating key file
+with open(f'/home/{ user_name }/.ssh/key', 'w') as outfile:
+    outfile.write(key)
+
+# read only permissions to key 
+os.chmod(f'/home/{ user_name }/.ssh/key', 400)
+
+# creating config file  ~/.ssh/config
+with open(f'/home/{ user_name }/.ssh/config', 'w') as outfile:
+    for key, value in current_dns.items():
+        outfile.write(f'''
+Host {key} { value }
+    HostName { value }
+    User { user_name }
+    Port 22
+    IdentityFile ~/.ssh/key
+    StrictHostKeyChecking no''')
