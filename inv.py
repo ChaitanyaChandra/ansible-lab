@@ -62,4 +62,4 @@ Host {key.lower()} { value }
     StrictHostKeyChecking no''')
 
 os.chmod("~/.ssh/key", 400)
-os.chmod("/.ssh/config", 600)
+os.chmod("~/.ssh/config", 600)
