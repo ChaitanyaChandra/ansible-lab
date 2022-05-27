@@ -64,4 +64,4 @@ Host {key} { value }
 
 # read only permissions to key
 os.chmod(f'/home/{ user_name }/.ssh/key', 400)
-os.chmod(f'/home/{ user_name }/.ssh/key', 600)
+os.chmod(f'/home/{ user_name }/.ssh/config', 600)
