@@ -46,7 +46,7 @@ secret = client.get_secret_value(
 json_res = json.loads(secret['SecretString'])  # convert total string to dict/json
 key = json_res['KEY']
 user_name = json_res['USER_NAME']
-
+print(key)
 # creating key file
 with open(f'/home/{ user_name }/.ssh/key', 'w') as outfile:
     outfile.write(key)
