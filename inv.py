@@ -55,7 +55,7 @@ with open(f'/home/{ user_name }/.ssh/key', 'w') as outfile:
 with open(f'/home/{ user_name }/.ssh/config', 'w') as outfile:
     for key, value in current_dns.items():
         outfile.write(f'''
-Host {key} { value }
+Host {key.lower()} { value }
     HostName { value }
     User { user_name }
     Port 22
