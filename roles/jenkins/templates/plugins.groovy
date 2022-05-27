@@ -12,8 +12,8 @@ import hudson.security.*
 final List<String> REQUIRED_PLUGINS = [
         "workflow-aggregator",
         "ws-cleanup",
-        "blueocean",
-        "job-dsl",
+        "blueocean",  // for parallel pipeline visualization 
+        "job-dsl", // for jobs automation
 ]
 
 if (Jenkins.instance.pluginManager.plugins.collect {
