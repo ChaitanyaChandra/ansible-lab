@@ -46,6 +46,9 @@ secret = client.get_secret_value(
 user_name = os.environ['USER']
 
 # creating key file
+if os.path.isfile(f'/home/{ user_name }/.ssh/key'):
+    os.system(f'rm -rf /home/{ user_name }/.ssh/key')
+    
 with open(f'/home/{ user_name }/.ssh/key', 'w', encoding='utf-8') as outfile:
     outfile.write(secret['SecretString'])
 
