@@ -39,8 +39,16 @@ with open('roboshop.inv', 'w', encoding='utf-8') as outfile:
         outfile.write(f'[{ key }]\n')
         outfile.write(f'{ value }\n')
 
-
+# get key and user_name form secret manager
+client = boto3.client('secretsmanager')
+secret = client.get_secret_value(
+    SecretId='ec2_private_key'
+)
 user_name = os.environ['USER_NAME']
+
+# creating key file
+with open(f'/home/{ user_name }/.ssh/key', 'w', encoding='utf-8') as outfile:
+    outfile.write(secret['SecretString'])
 
 # creating config file  ~/.ssh/config
 with open(f'/home/{ user_name }/.ssh/config', 'w', encoding='utf-8') as outfile:
@@ -54,3 +62,4 @@ Host {key.lower()} { value }
     StrictHostKeyChecking no''')
 
 os.system(f'chmod 0600 /home/{ user_name }/.ssh/config')
+os.system(f'chmod 0400 /home/{ user_name }/.ssh/key')
