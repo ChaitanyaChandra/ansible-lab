@@ -48,7 +48,7 @@ key = json_res['KEY']
 user_name = json_res['USER_NAME']
 # creating key file
 with open(f'/home/{ user_name }/.ssh/key', 'w') as outfile:
-    outfile.write(key)
+    outfile.write(key.replace(' ',''))
 
 # creating config file  ~/.ssh/config
 with open(f'/home/{ user_name }/.ssh/config', 'w') as outfile:
@@ -60,6 +60,3 @@ Host {key.lower()} { value }
     Port 22
     IdentityFile ~/.ssh/key
     StrictHostKeyChecking no''')
-
-
-print(json_res['KEY'].replace(' ',''))
