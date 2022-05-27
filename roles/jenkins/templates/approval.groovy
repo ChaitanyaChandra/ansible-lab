@@ -7,7 +7,6 @@ import org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.*;
 scriptApproval = ScriptApproval.get()
 alreadyApproved = new HashSet<>(Arrays.asList(scriptApproval.getApprovedSignatures()))
 
-
 // add all manual whitelist methods here.
 
 approveSignature('method groovy.json.JsonBuilder call java.util.List')

@@ -10,6 +10,7 @@ println "--> creating admin user"
 def adminUsername = "{{ USER_NAME }}"
 def adminPassword = "{{ PASSWORD }}"
 
+
 def hudsonRealm = new HudsonPrivateSecurityRealm(false)
 hudsonRealm.createAccount(adminUsername, adminPassword)
 Jenkins.instance.setSecurityRealm(hudsonRealm)

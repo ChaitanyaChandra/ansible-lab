@@ -19,6 +19,7 @@ final List<String> REQUIRED_PLUGINS = [
         "aws-secrets-manager-credentials-provider",
 ]
 
+
 if (Jenkins.instance.pluginManager.plugins.collect {
     it.shortName
 }.intersect(REQUIRED_PLUGINS).size() != REQUIRED_PLUGINS.size()) {
