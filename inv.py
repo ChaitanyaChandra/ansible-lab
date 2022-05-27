@@ -2,8 +2,7 @@ import boto3
 import json
 import os
 
-region = 'us-east-1'
-
+# export aws cli env variable
 os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
 
 route53 = boto3.client('route53')
