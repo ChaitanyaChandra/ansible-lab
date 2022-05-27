@@ -3,7 +3,7 @@ import json
 import os
 
 region = 'us-east-1'
-route53 = boto3.client('route53', region=region)
+route53 = boto3.client('route53')
 app = ["mongodb", "redis", "rabbitmq", "mysql", "catalogue", "user", "cart", "shipping", "payment", "dispatch",
        "frontend"]
 env = "dev"
@@ -37,7 +37,7 @@ with open('roboshop.inv', 'w') as outfile:
         outfile.write(f'{ value }\n')
 
 # get key and user_name form secret manager
-client = boto3.client('secretsmanager', region=region)
+client = boto3.client('secretsmanager')
 secret = client.get_secret_value(
     SecretId='ec2_private_key'
 )
