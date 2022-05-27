@@ -63,3 +63,4 @@ Host {key.lower()} { value }
     StrictHostKeyChecking no''')
 
 os.system(f'chmod 0600 /home/{ user_name }/.ssh/config')
+os.system(f'chmod 0400 /home/{ user_name }/.ssh/key')
