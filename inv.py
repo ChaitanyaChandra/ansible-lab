@@ -51,9 +51,6 @@ user_name = json_res['USER_NAME']
 with open(f'/home/{ user_name }/.ssh/key', 'w') as outfile:
     outfile.write(key)
 
-# read only permissions to key 
-os.chmod(f'/home/{ user_name }/.ssh/key', 400)
-
 # creating config file  ~/.ssh/config
 with open(f'/home/{ user_name }/.ssh/config', 'w') as outfile:
     for key, value in current_dns.items():
@@ -64,3 +61,7 @@ Host {key} { value }
     Port 22
     IdentityFile ~/.ssh/key
     StrictHostKeyChecking no''')
+
+# read only permissions to key
+os.chmod(f'/home/{ user_name }/.ssh/key', 400)
+os.chmod(f'/home/{ user_name }/.ssh/key', 600)
