@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/roles/jenkins/templates/plugins.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/roles/jenkins/templates/plugins.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/jenkins/vars/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/jenkins/vars/main.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/jenkins/files/server.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/jenkins/files/server.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/jenkins/tasks/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/jenkins/tasks/main.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/work_station.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/work_station.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +18,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/roles/jenkins/tasks/main.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/roles/jenkins/handlers/main.yaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/roles/jenkins/templates/admin_setup.groovy" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/roles/frontend/templates/nginx.conf" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/roles/frontend/templates/roboshop.conf" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/roles/jenkins/templates/plugins.groovy" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/roles/frontend/tasks/main.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/roles/jenkins/templates/jenkins.conf" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/roles/jenkins/vars/main.yaml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="arn:aws:eks:us-east-1:644125279705:cluster/chaitu-nonpord-eks-us-east-1-dev" />
@@ -61,7 +75,7 @@
       <workItem from="1653032928260" duration="21049000" />
       <workItem from="1653211620742" duration="10406000" />
       <workItem from="1653388561735" duration="6328000" />
-      <workItem from="1653418678486" duration="41859000" />
+      <workItem from="1653418678486" duration="43992000" />
     </task>
     <servers />
   </component>

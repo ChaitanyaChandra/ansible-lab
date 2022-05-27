@@ -1,5 +1,6 @@
 - name: workstation setup
   hosts: work_station
+  become: yes
   tasks:
     - ansible.builtin.copy:
         src: ~/.ssh/config
@@ -9,3 +10,6 @@
         src: ~/.ssh/key
         dest: ~/.ssh/key
         mode: '0400'
+
+    - name: Set Hostname
+      ansible.builtin.shell:  hostnamectl set-hostname work_station

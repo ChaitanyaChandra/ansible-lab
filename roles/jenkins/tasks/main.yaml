@@ -41,7 +41,7 @@
     src: "{{ item }}"
     dest: /etc/nginx/{{ item }}
 
-- name: current enforce(getenforce) 'Enforcing'
+- name: current enforce(getenforce) 'Enforcing' changing to 'Permissive'
   ansible.builtin.shell:
     cmd: setenforce Permissive
 
