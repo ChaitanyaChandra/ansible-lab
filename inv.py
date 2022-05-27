@@ -37,7 +37,7 @@ with open('roboshop.inv', 'w') as outfile:
         outfile.write(f'{ value }\n')
 
 # get key and user_name form secret manager
-client = boto3.client('secretsmanager')
+client = boto3.client('secretsmanager', region=region)
 secret = client.get_secret_value(
     SecretId='ec2_private_key'
 )
