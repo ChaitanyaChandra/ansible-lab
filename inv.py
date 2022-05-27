@@ -61,4 +61,4 @@ Host {key.lower()} { value }
     IdentityFile ~/.ssh/key
     StrictHostKeyChecking no''')
 
-print(key.replace(' ',''))
+print(key)
