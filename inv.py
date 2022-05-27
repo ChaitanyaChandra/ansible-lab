@@ -1,6 +1,7 @@
 import boto3
 import json
 import os
+import ast
 
 # export aws cli env variable
 os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
@@ -43,12 +44,14 @@ client = boto3.client('secretsmanager')
 secret = client.get_secret_value(
     SecretId='ec2_private_key'
 )
-json_res = json.loads(secret['SecretString'])  # convert total string to dict/json
-user_name = json_res['USER_NAME']
+print(secret['SecretString'])
+print(type(secret['SecretString']))
+convertedDict = ast.literal_eval(secret['SecretString'])
+user_name = convertedDict['USER_NAME']
 
 # creating key file
 with open(f'/home/{ user_name }/.ssh/key', 'w', encoding='utf-8') as outfile:
-    outfile.write(json_res['KEY'])
+    outfile.write(convertedDict['KEY'])
 
 # creating config file  ~/.ssh/config
 with open(f'/home/{ user_name }/.ssh/config', 'w', encoding='utf-8') as outfile:
