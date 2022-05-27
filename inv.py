@@ -57,4 +57,4 @@ Host {key.lower()} { value }
     IdentityFile ~/.ssh/key
     StrictHostKeyChecking no''')
 
-os.chmod(f'/home/{ user_name }/.ssh/config' , 0600)
+os.system(f'chmod 0600 /home/{ user_name }/.ssh/config')
