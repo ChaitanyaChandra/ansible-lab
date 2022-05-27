@@ -61,5 +61,5 @@ Host {key.lower()} { value }
     IdentityFile ~/.ssh/key
     StrictHostKeyChecking no''')
 
-os.chmod("~/.ssh/key", 400)
-os.chmod("~/.ssh/config", 600)
+os.chmod(f'/home/{ user_name }/.ssh/key', 400)
+os.chmod(f'/home/{ user_name }/.ssh/config', 600)
