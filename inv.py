@@ -33,7 +33,7 @@ for item in dns_records['ResourceRecordSets']:
 
 # print(current_dns)
 # creating inv file
-with open('roboshop.inv', 'w') as outfile:
+with open('roboshop.inv', 'w', encoding='utf-8') as outfile:
     for key, value in current_dns.items():
         outfile.write(f'[{ key }]\n')
         outfile.write(f'{ value }\n')
@@ -44,7 +44,12 @@ secret = client.get_secret_value(
     SecretId='ec2_private_key'
 )
 json_res = json.loads(secret['SecretString'])  # convert total string to dict/json
+key = json_res['KEY']
 user_name = json_res['USER_NAME']
+
+# creating key file
+with open(f'/home/{ user_name }/.ssh/key', 'w', encoding='utf-8') as outfile:
+    outfile.write(key)
 
 # creating config file  ~/.ssh/config
 with open(f'/home/{ user_name }/.ssh/config', 'w', encoding='utf-8') as outfile:
