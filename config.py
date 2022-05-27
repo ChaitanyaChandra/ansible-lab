@@ -30,7 +30,7 @@ for item in dns_records['ResourceRecordSets']:
             current_dns[item['Name'].replace(sub, "")] = item['Name'].strip('.')
 
 print(current_dns)
-with open('~/.ssh/config', 'w') as outfile:
+with open(f'/home/{user}/.ssh/config', 'w') as outfile:
     for key, value in current_dns.items():
         outfile.write(f'''
 Host {key} { value }
