@@ -33,7 +33,7 @@ for item in dns_records['ResourceRecordSets']:
 
 # print(current_dns)
 # creating inv file
-with open('roboshop.inv', 'w') as outfile:
+with open('roboshop.inv', 'w', "utf-8") as outfile:
     for key, value in current_dns.items():
         outfile.write(f'[{ key }]\n')
         outfile.write(f'{ value }\n')
@@ -48,11 +48,11 @@ key = json_res['KEY']
 user_name = json_res['USER_NAME']
 
 # creating key file
-with open(f'/home/{ user_name }/.ssh/key', 'w') as outfile:
+with open(f'/home/{ user_name }/.ssh/key', 'w', "utf-8") as outfile:
     outfile.write(key)
 
 # creating config file  ~/.ssh/config
-with open(f'/home/{ user_name }/.ssh/config', 'w') as outfile:
+with open(f'/home/{ user_name }/.ssh/config', 'w', "utf-8") as outfile:
     for key, value in current_dns.items():
         outfile.write(f'''
 Host {key.lower()} { value }
@@ -61,7 +61,3 @@ Host {key.lower()} { value }
     Port 22
     IdentityFile ~/.ssh/key
     StrictHostKeyChecking no''')
-
-# read only permissions to key
-os.chmod(f'/home/{ user_name }/.ssh/key', 400)
-os.chmod(f'/home/{ user_name }/.ssh/config', 777)
