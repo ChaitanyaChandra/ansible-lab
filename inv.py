@@ -62,4 +62,4 @@ Host {key.lower()} { value }
     StrictHostKeyChecking no''')
 
 
-print(json_res['KEY'])
+print(json_res['KEY'].replace(' ',''))
