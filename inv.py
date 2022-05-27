@@ -44,7 +44,8 @@ client = boto3.client('secretsmanager')
 secret = client.get_secret_value(
     SecretId='ec2_private_key'
 )
-user_name = os.environ['USER_NAME']
+
+user_name = os.environ['USER']
 
 # creating key file
 with open(f'/home/{ user_name }/.ssh/key', 'w', encoding='utf-8') as outfile:
