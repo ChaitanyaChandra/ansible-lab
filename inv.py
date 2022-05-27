@@ -48,7 +48,7 @@ key = json_res['KEY']
 user_name = json_res['USER_NAME']
 
 # creating key file
-with open(f'/home/{ user_name }/.ssh/key', 'w', "utf-8") as outfile:
+with open(f'/home/{ user_name }/.ssh/key', 'w') as outfile:
     outfile.write(key)
 
 # creating config file  ~/.ssh/config
