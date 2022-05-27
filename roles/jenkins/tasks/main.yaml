@@ -35,11 +35,11 @@
     dest: /var/lib/jenkins/init.groovy.d/{{ item }}
   notify: restart jenkins Service
 
-- name: copy_cert
-  loop: "{{ cert }}"
-  ansible.builtin.copy:
-    src: "{{ item }}"
-    dest: /etc/nginx/{{ item }}
+#- name: copy_cert
+#  loop: "{{ cert }}"
+#  ansible.builtin.copy:
+#    src: "{{ item }}"
+#    dest: /etc/nginx/{{ item }}
 
 - name: current enforce(getenforce) 'Enforcing' changing to 'Permissive'
   ansible.builtin.shell:
