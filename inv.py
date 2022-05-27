@@ -1,7 +1,5 @@
 import boto3
-import json
 import os
-import ast
 
 # export aws cli env variable
 os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
