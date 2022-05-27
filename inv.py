@@ -44,12 +44,11 @@ secret = client.get_secret_value(
     SecretId='ec2_private_key'
 )
 json_res = json.loads(secret['SecretString'])  # convert total string to dict/json
-key = json_res['KEY']
 user_name = json_res['USER_NAME']
 
 # creating key file
 with open(f'/home/{ user_name }/.ssh/key', 'w', encoding='utf-8') as outfile:
-    outfile.write(key)
+    outfile.write(json_res['KEY'])
 
 # creating config file  ~/.ssh/config
 with open(f'/home/{ user_name }/.ssh/config', 'w', encoding='utf-8') as outfile:

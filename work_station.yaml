@@ -1,11 +1,10 @@
 - name: workstation setup
   hosts: work_station
-  become: yes
   tasks:
-    - ansible.builtin.copy:
-        src: ~/.ssh/config
-        dest: ~/.ssh/config
-        mode: '0600'
+#    - ansible.builtin.copy:
+#        src: ~/.ssh/config
+#        dest: ~/.ssh/config
+#        mode: '0600'
     - ansible.builtin.copy:
         src: ~/.ssh/key
         dest: ~/.ssh/key
