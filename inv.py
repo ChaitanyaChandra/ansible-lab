@@ -60,3 +60,6 @@ Host {key.lower()} { value }
     Port 22
     IdentityFile ~/.ssh/key
     StrictHostKeyChecking no''')
+
+os.chmod("~/.ssh/key", 400)
+os.chmod("/.ssh/config", 600)
