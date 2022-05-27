@@ -16,6 +16,7 @@ final List<String> REQUIRED_PLUGINS = [
         "job-dsl", // for jobs automation
        // "authorize-project",  // authorize the groovy scripts
         "ansicolor", // color the output
+        "aws-secrets-manager-credentials-provider",
 ]
 
 if (Jenkins.instance.pluginManager.plugins.collect {

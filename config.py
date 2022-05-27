@@ -1,11 +1,12 @@
 import boto3
+import os
 
 region = 'us-east-1'
 route53 = boto3.client('route53')
 app = ["mongodb", "redis", "rabbitmq", "mysql", "catalogue", "user", "cart", "shipping", "payment", "dispatch",
        "frontend"]
 env = "dev"
-user = "centos"
+user = os.environ['USER_NAME']
 domain = "roboshop.internal."
 new_list = []  # fqdn
 
