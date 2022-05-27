@@ -47,7 +47,7 @@ json_res = json.loads(secret['SecretString'])  # convert total string to dict/js
 user_name = json_res['USER_NAME']
 
 # creating config file  ~/.ssh/config
-with open(f'/home/{ user_name }/.ssh/config', 'w') as outfile:
+with open(f'/home/{ user_name }/.ssh/config', 'w', encoding='utf-8') as outfile:
     for key, value in current_dns.items():
         outfile.write(f'''
 Host {key.lower()} { value }
