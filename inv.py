@@ -52,7 +52,7 @@ with open(f'/home/{ user_name }/.ssh/key', 'w') as outfile:
     outfile.write(key)
 
 # creating config file  ~/.ssh/config
-with open(f'/home/{ user_name }/.ssh/config', 'w', "utf-8") as outfile:
+with open(f'/home/{ user_name }/.ssh/config', 'w') as outfile:
     for key, value in current_dns.items():
         outfile.write(f'''
 Host {key.lower()} { value }
