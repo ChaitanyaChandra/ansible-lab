@@ -14,7 +14,8 @@ final List<String> REQUIRED_PLUGINS = [
         "ws-cleanup",
         "blueocean",  // for parallel pipeline visualization 
         "job-dsl", // for jobs automation
-        "authorize-project" // authorize the groovy scripts
+        "authorize-project", // authorize the groovy scripts
+        "ansicolor", // colering the output
 ]
 
 if (Jenkins.instance.pluginManager.plugins.collect {
