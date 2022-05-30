@@ -45,9 +45,9 @@ secret = client.get_secret_value(
 
 # get user_name form jenkins if no user_name is defined go to else block and assign username of current OS(jenkins slave) 
 if os.environ.get('USER_NAME'):
-    pass
-# else:
-#     user_name = os.environ['USER']
+    user_name = os.environ['USER_NAME']
+else:
+    user_name = os.environ['USER']
 
 # deleting old key file 
 if os.path.isfile(f'/home/{ user_name }/.ssh/key'):
