@@ -43,6 +43,7 @@ secret = client.get_secret_value(
     SecretId='ec2_private_key'
 )
 
+# get user_name form jenkins if no user_name is defined go to else block and assign username of current OS(jenkins slave) 
 if os.environ.get('USER_NAME'):
     pass
 else:
