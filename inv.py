@@ -43,7 +43,10 @@ secret = client.get_secret_value(
     SecretId='ec2_private_key'
 )
 
-user_name = os.environ['USER']
+if os.environ['USER_NAME']:
+    pass
+else:
+    user_name = os.environ['USER']
 
 # deleting old key file 
 if os.path.isfile(f'/home/{ user_name }/.ssh/key'):
