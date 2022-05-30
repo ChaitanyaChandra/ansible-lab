@@ -32,10 +32,12 @@ for item in dns_records['ResourceRecordSets']:
 
 # print(current_dns)
 # creating inv file
-with open('roboshop.inv', 'w', encoding='utf-8') as outfile:
+file_name = "roboshop.inv"
+with open(file_name, 'w', encoding='utf-8') as outfile:
     for key, value in current_dns.items():
         outfile.write(f'[{ key }]\n')
         outfile.write(f'{ value }\n')
+    print(f'inventory file is created at {os.getcwd()}/{file_name}')
 
 # get key and user_name form secret manager
 client = boto3.client('secretsmanager')
@@ -60,6 +62,7 @@ if os.path.isfile(f'/home/{ user_name }/.ssh/config'):
 # creating key file    
 with open(f'/home/{ user_name }/.ssh/key', 'w', encoding='utf-8') as outfile:
     outfile.write(secret['SecretString'])
+    print(f'private key file is installed at /home/{ user_name }/.ssh/key')
 
 # creating config file  ~/.ssh/config
 with open(f'/home/{ user_name }/.ssh/config', 'w', encoding='utf-8') as outfile:
@@ -71,6 +74,7 @@ Host {key.lower()} { value }
     Port 22
     IdentityFile ~/.ssh/key
     StrictHostKeyChecking no''')
+    print(f'config file is installed at /home/{ user_name }/.ssh/config')
 
 os.system(f'chmod 0600 /home/{ user_name }/.ssh/config')
 os.system(f'chmod 0400 /home/{ user_name }/.ssh/key')
