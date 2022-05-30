@@ -43,7 +43,7 @@ secret = client.get_secret_value(
     SecretId='ec2_private_key'
 )
 
-if os.environ['USER_NAME']:
+if os.environ.get('USER_NAME'):
     pass
 else:
     user_name = os.environ['USER']
