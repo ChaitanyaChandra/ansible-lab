@@ -3,7 +3,7 @@
   roles:
     - jenkins
 
-- hosts: sonae
+- hosts: sonar
   become: yes
   roles:
     - sonar
