@@ -5,7 +5,6 @@
   copy:
     src: jenkins.repo
     dest: /etc/yum.repos.d/jenkins.repo
-    state: present
 
 - name: Install EPEL repo
   yum:
@@ -53,6 +52,6 @@
 
 - name: Copy sonar reverse proxy configuration
   ansible.builtin.template:
-    src: sonar.conf
+    src:  sonar.conf
     dest: /etc/nginx/conf.d/sonar.conf
   notify: restart nginx Service
