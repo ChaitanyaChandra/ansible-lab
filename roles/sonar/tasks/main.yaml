@@ -45,7 +45,6 @@
   ansible.builtin.template:
     src:  sonar.conf
     dest: /etc/nginx/conf.d/sonar.conf
-  notify: restart nginx Service
 
 - name: Copy sonar qube service
   ansible.builtin.template:
@@ -59,3 +58,8 @@
     state: started
     daemon_reload: yes
 #  become_user:  "{{ COMPONENT }}"
+
+- name: restart nginx Service
+  ansible.builtin.systemd:
+    name: nginx
+    state: restarted
