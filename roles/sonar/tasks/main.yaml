@@ -49,7 +49,7 @@
     src:  sonar.service
     dest: /etc/systemd/system/sonarqube.service
 
-- name: Enable and Start the Service
+- name: Enable and Start the service
   ansible.builtin.systemd:
     name: sonarqube
     enabled: yes
@@ -57,7 +57,7 @@
     daemon_reload: yes
 #  become_user:  "{{ COMPONENT }}"
 
-- name: restart nginx Service
+- name: restart nginx service
   ansible.builtin.systemd:
     name: nginx
     state: restarted
