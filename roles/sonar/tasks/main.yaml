@@ -10,9 +10,9 @@
   ansible.builtin.yum:
     name:
       - java-11-openjdk
-      - jenkins
       - git
       - nginx
+      - ufw
     state: present
   notify: Enable and Start the Service
 
@@ -50,6 +50,9 @@
   ansible.builtin.template:
     src:  sonar.service
     dest: /etc/systemd/system/sonarqube.service
+
+- name: firewall
+  shell: "ufw enable ; ufw allow 'Nginx Full' ; ufw --reload"
 
 - name: Enable and Start the Service
   ansible.builtin.systemd:
