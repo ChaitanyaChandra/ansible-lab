@@ -35,6 +35,7 @@
 
 - name: Kill running processes
   shell: "pkill java"
+  ignore_errors: yes
 
 - name: current enforce(getenforce) 'Enforcing' changing to 'Permissive'
   ansible.builtin.shell:
