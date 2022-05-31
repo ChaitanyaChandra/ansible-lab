@@ -10,6 +10,5 @@ ExecReload=/home/sonar/sonarqube/bin/linux-x86-64/sonar.sh restart
 Type=forking
 User=sonar
 
-
 [Install]
 WantedBy=multi-user.target

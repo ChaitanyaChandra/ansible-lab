@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/jenkins/tasks/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/jenkins/tasks/main.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/jenkins/templates/sonar.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inv.ini" beforeDir="false" afterPath="$PROJECT_DIR$/inv.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/sonar/files/sonar.service" beforeDir="false" afterPath="$PROJECT_DIR$/roles/sonar/files/sonar.service" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/sonar/handlers/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/sonar/handlers/main.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
       <workItem from="1653211620742" duration="10406000" />
       <workItem from="1653388561735" duration="6328000" />
       <workItem from="1653418678486" duration="64523000" />
-      <workItem from="1653731485605" duration="9894000" />
+      <workItem from="1653731485605" duration="10433000" />
     </task>
     <servers />
   </component>
