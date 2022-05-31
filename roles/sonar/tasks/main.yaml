@@ -12,7 +12,6 @@
       - java-11-openjdk
       - git
       - nginx
-      - ufw
     state: present
 
 - name: Add Application User
@@ -49,9 +48,6 @@
   ansible.builtin.template:
     src:  sonar.service
     dest: /etc/systemd/system/sonarqube.service
-
-- name: firewall
-  shell: "ufw enable ; ufw allow 'Nginx Full' ; ufw --reload"
 
 - name: Enable and Start the Service
   ansible.builtin.systemd:
