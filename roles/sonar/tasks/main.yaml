@@ -56,3 +56,4 @@
     name: sonarqube
     enabled: yes
     state: started
+  become_user:  sonar

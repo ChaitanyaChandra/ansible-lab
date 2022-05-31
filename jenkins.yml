@@ -2,3 +2,8 @@
   become: yes
   roles:
     - jenkins
+
+- hosts: sonae
+  become: yes
+  roles:
+    - sonar
