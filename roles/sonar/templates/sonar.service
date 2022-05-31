@@ -8,7 +8,7 @@ ExecStart=/home/{{ COMPONENT }}/sonarqube/bin/linux-x86-64/sonar.sh start
 ExecStop=/home/{{ COMPONENT }}/sonarqube/bin/linux-x86-64/sonar.sh stop
 ExecReload=/home/{{ COMPONENT }}/sonarqube/bin/linux-x86-64/sonar.sh restart
 Type=forking
-User=sonar
+User={{ COMPONENT }}
 
 [Install]
 WantedBy=multi-user.target
