@@ -48,8 +48,8 @@
   notify: restart nginx Service
 
 - name: Copy sonar qube service
-  ansible.builtin.copy:
-    src: sonar.service
+  ansible.builtin.template:
+    src:  sonar.service
     dest: /etc/systemd/system/sonarqube.service
 
 - name: Enable and Start the Service
