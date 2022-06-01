@@ -19,16 +19,14 @@
   ansible.builtin.user:
     name: "{{COMPONENT}}"
 
-- name: Creates directory
-  ansible.builtin.file:
-    path: /home/{{ COMPONENT }}/sonarqube/
-    state: directory
-
 - name: Download and UnZip the {{COMPONENT}} Content
   ansible.builtin.unarchive:
     src: https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.8.54436.zip
-    dest: /home/{{ COMPONENT }}/sonarqube/
+    dest: /home/{{ COMPONENT }}/
     remote_src: yes
+
+#- name: Copy files from foo to bar
+#  copy: remote_src=True src=/path/to/foo dest=/path/to/bar
 
 - name: Change file ownership, group and permissions
   ansible.builtin.file:
@@ -61,7 +59,7 @@
     enabled: yes
     state: restarted
     daemon_reload: yes
-#  become_user:  "{{ COMPONENT }}"
+#   become_user:  "{{ COMPONENT }}"
 
 - name: restart nginx service
   ansible.builtin.systemd:
