@@ -25,8 +25,8 @@
     dest: /home/{{ COMPONENT }}/
     remote_src: yes
 
-#- name: Copy files from foo to bar
-#  copy: remote_src=True src=/path/to/foo dest=/path/to/bar
+- name: Copy files from foo to bar
+  copy: remote_src=True src=/home/{{ COMPONENT }}/sonarqube-8.9.8.54436 dest=/home/{{ COMPONENT }}/sonarqube
 
 - name: Change file ownership, group and permissions
   ansible.builtin.file:
