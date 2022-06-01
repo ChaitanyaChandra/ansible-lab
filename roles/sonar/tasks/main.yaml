@@ -18,7 +18,6 @@
 - name: Add Application User
   ansible.builtin.user:
     name: "{{COMPONENT}}"
-    group: "sudo"
 
 - name: Download and UnZip the {{COMPONENT}} Content
   ansible.builtin.unarchive:
@@ -62,7 +61,7 @@
     enabled: yes
     state: restarted
     daemon_reload: yes
-#  become_user:  "{{ COMPONENT }}"
+  become_user:  "{{ COMPONENT }}"
 
 - name: restart nginx service
   ansible.builtin.systemd:
