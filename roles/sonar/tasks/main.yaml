@@ -6,7 +6,7 @@
     name: epel-release
     state: present
 
-- name: Ensure java & Jenkins is Installed
+- name: Ensure java &  sonarqube is Installed
   ansible.builtin.yum:
     name:
       - java-11-openjdk
@@ -17,6 +17,11 @@
 - name: Add Application User
   ansible.builtin.user:
     name: "{{COMPONENT}}"
+
+- name: Creates directory
+  file:
+    path: /home/{{ COMPONENT }}/sonarqube/
+    state: present
 
 - name: Download and UnZip the {{COMPONENT}} Content
   ansible.builtin.unarchive:
