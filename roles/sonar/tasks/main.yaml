@@ -30,7 +30,7 @@
 
 - name: Change file ownership, group and permissions
   ansible.builtin.file:
-    path: /home/{{ COMPONENT }}/sonarqube/
+    path: /home/{{ COMPONENT }}/
     owner: "{{ COMPONENT }}"
     group: "{{ COMPONENT }}"
     mode: '0777'
