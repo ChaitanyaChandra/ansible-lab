@@ -19,7 +19,7 @@
     name: "{{COMPONENT}}"
 
 - name: Creates directory
-  file:
+  ansible.builtin.file:
     path: /home/{{ COMPONENT }}/sonarqube/
     state: directory
 
