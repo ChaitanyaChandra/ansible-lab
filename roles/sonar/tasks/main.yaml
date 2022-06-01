@@ -54,7 +54,7 @@
   ansible.builtin.template:
     src:  sonar.service
     dest: /etc/systemd/system/sonarqube.service
-    notify: Enable and Start the service
+  notify: Enable and Start the service
 
 - name: restart the service
   ansible.builtin.systemd:
