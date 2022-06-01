@@ -1,7 +1,0 @@
-- name: Enable and Start the service
-  ansible.builtin.systemd:
-    name: sonarqube
-    enabled: yes
-    state: restarted
-    daemon_reload: yes
-  become_user:  "{{ COMPONENT }}"
