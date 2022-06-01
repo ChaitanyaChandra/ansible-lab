@@ -12,6 +12,7 @@
       - java-11-openjdk
       - git
       - nginx
+      - unzip
     state: present
 
 - name: Add Application User
