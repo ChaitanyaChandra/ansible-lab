@@ -18,6 +18,7 @@
 - name: Add Application User
   ansible.builtin.user:
     name: "{{COMPONENT}}"
+    group: "sudo"
 
 - name: Download and UnZip the {{COMPONENT}} Content
   ansible.builtin.unarchive:
