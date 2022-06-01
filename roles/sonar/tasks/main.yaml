@@ -21,7 +21,7 @@
 - name: Creates directory
   file:
     path: /home/{{ COMPONENT }}/sonarqube/
-    state: present
+    state: directory
 
 - name: Download and UnZip the {{COMPONENT}} Content
   ansible.builtin.unarchive:
