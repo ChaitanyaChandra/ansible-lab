@@ -62,6 +62,7 @@
     state: restarted
     daemon_reload: yes
   become_user:  "{{ COMPONENT }}"
+  ignore_errors: yes
 
 - name: restart nginx service
   ansible.builtin.systemd:
