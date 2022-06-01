@@ -63,7 +63,7 @@
     enabled: yes
     state: restarted
     daemon_reload: yes
-#   become_user:  "{{ COMPONENT }}" # user need to be add in shouders
+#   become_user:  "{{ COMPONENT }}" # user need to be add in sudoers
 
 - name: restart nginx service
   ansible.builtin.systemd:
