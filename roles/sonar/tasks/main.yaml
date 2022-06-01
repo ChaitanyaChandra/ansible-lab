@@ -23,7 +23,7 @@
   ansible.builtin.unarchive:
     src: https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.8.54436.zip
     dest: /home/{{ COMPONENT }}/ # already existing path
-    creates: /home/{{ COMPONENT }}/sonarqube/  # some path to make sure that the archive has already been unpacked
+    creates: /home/{{ COMPONENT }}/sonarqube/bin/linux-x86-64/sonar.sh  # some path to make sure that the archive has already been unpacked
     remote_src: yes
 
 - name: Change file ownership, group and permissions
