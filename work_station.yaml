@@ -1,3 +1,4 @@
+
 - name: workstation setup
   hosts: work_station
   tasks:
