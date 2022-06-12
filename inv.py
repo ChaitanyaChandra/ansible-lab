@@ -31,7 +31,7 @@ for item in dns_records['ResourceRecordSets']:
 
 # print(current_dns)
 # creating inv file
-file_name = "roboshop.inv"
+file_name = "inv.ini"
 with open(file_name, 'w', encoding='utf-8') as outfile:
     for key, value in current_dns.items():
         outfile.write(f'[{ key }]\n')
