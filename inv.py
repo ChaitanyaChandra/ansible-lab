@@ -5,10 +5,9 @@ import os
 os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
 
 route53 = boto3.client('route53')
-app = ["mongodb", "redis", "rabbitmq", "mysql", "catalogue", "user", "cart", "shipping", "payment", "dispatch",
-       "frontend"]
+app = ["nodejs-internal", "internet-facing", "jenkins", "work-station"]
 env = "dev"
-domain = "roboshop.internal."
+domain = "chaitu.org"
 new_list = []  # fqdn
 
 for item in app:
