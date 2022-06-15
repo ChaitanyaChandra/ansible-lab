@@ -1,11 +1,20 @@
 - name: nginx reverse proxy setup for nodejs
   hosts: INTERNET-FACING
+  become: yes
   tags: nginx
   vars:
     - COMPONENT: nodejs
   become: yes
   roles:
     - nginx
+
+- name: nginx reverse proxy setup for nodejs
+  hosts: NODEJS-INTERNAL
+  become: yes
+  tags: nodejs
+  become: yes
+  roles:
+    - nodejs
 #
 #- hosts: WORK-STATION
 #  become: yes
