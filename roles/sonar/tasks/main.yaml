@@ -57,7 +57,6 @@
 
 - name: restart the service
   ansible.builtin.systemd:
-  ansible.builtin.systemd:
     name: sonarqube
     enabled: yes
     state: restarted
