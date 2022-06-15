@@ -17,16 +17,11 @@
   become: yes
   tags: nodejs
 
-#
-#- hosts: WORK-STATION
-#  become: yes
-#  roles:
-#    - nodejs
-#- hosts: JENKINS
-#  become: yes
-#  roles:
-#    - jenkins
-#- hosts: sonar
-#  become: yes
-#  roles:
-#    - sonar
+- hosts: JENKINS
+  become: yes
+  roles:
+    - jenkins
+- hosts: sonar
+  become: yes
+  roles:
+    - sonar
