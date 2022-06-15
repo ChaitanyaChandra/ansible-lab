@@ -1,22 +1,3 @@
-- name: nginx reverse proxy setup for nodejs
-  hosts: INTERNET-FACING
-  tags: nginx
-  vars:
-    - COMPONENT: nodejs
-    - SERVICE: nodejs-internal #  nodejs-internal-dev.chaitu.org:8080
-    - ENV: dev
-    - DOMAIN: chaitu.org
-  become: yes
-  roles:
-    - nginx
-
-- name: nodejs internal install with dependencyes
-  roles:
-    - nodejs
-  hosts: NODEJS-INTERNAL
-  become: yes
-  tags: nodejs
-
 - hosts: JENKINS
   become: yes
   roles:
