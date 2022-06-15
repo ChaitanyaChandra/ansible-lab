@@ -1,0 +1,17 @@
+- name: Install EPEL repo
+  yum:
+    name: epel-release
+    state: present
+
+- name: Ensure java & Jenkins is Installed
+  ansible.builtin.yum :
+    name:
+      - nginx
+    state: present
+  notify: Enable and Start the Service
+
+- name: Copy jenkins reverse proxy configuration
+  ansible.builtin.template:
+    src: nodejs.conf
+    dest: /etc/nginx/conf.d/nodejs.conf
+  notify: restart nginx Service
