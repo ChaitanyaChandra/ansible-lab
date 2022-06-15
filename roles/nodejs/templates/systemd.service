@@ -6,8 +6,8 @@ After=network.target
 User={{USER}}
 ExecStart=/bin/node /home/{{USER}}/{{COMPONENT}}/index.js
 SyslogIdentifier="{{COMPONENT}}"
-StandardOutput=/var/log/{{COMPONENT}}/node_logs.log
-StandardError=/var/log/{{COMPONENT}}/node_error_logs.log
+StandardOutput=syslog
+StandardError=syslog
 
 [Install]
 WantedBy=multi-user.target
