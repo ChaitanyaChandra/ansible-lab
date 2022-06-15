@@ -1,4 +1,4 @@
-- name: Import NodeJS for Cart
+- name: Import NodeJS
   ansible.builtin.import_role:
     name: nodejs
-    tasks_from: main.yaml
+    tasks_from: main
