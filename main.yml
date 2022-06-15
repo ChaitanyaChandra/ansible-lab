@@ -1,5 +1,6 @@
 - name: nginx reverse proxy setup for nodejs
   hosts: INTERNET-FACING
+  tags: nginx
   vars:
     - COMPONENT: nodejs
   become: yes
