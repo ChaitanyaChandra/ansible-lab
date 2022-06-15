@@ -4,6 +4,8 @@ Description = {{COMPONENT}} Service
 User="{{USER}}"
 ExecStart=/bin/node /home/{{USER}}/{{COMPONENT}}/index.js
 SyslogIdentifier="{{COMPONENT}}"
+StandardOutput=/var/log/node/node_log.log
+StandardError=/var/log/node/node_error_log.log
 
 [Install]
 WantedBy=multi-user.target
