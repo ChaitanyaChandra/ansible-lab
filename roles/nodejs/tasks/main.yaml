@@ -13,8 +13,7 @@
 - name: Application User Setup and Download App Files
   import_tasks: app-user-setup.yml
 
-- name: Install packages based on package.json.
-  community.general.npm:
+- community.general.npm:
     path: /home/{{USER}}/{{COMPONENT}}
   become_user: "{{USER}}"
 
