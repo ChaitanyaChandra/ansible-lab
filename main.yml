@@ -9,7 +9,7 @@
 
 - name: nodejs internal install with dependencyes
   roles:
-    - nodejs
+    - node
   hosts: NODEJS-INTERNAL
   become: yes
   tags: nodejs
