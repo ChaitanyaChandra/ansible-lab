@@ -6,16 +6,16 @@
   become: yes
   roles:
     - nginx
-
-- hosts: WORK-STATION
-  become: yes
-  roles:
-    - nodejs
-- hosts: JENKINS
-  become: yes
-  roles:
-    - jenkins
-- hosts: sonar
-  become: yes
-  roles:
-    - sonar
+#
+#- hosts: WORK-STATION
+#  become: yes
+#  roles:
+#    - nodejs
+#- hosts: JENKINS
+#  become: yes
+#  roles:
+#    - jenkins
+#- hosts: sonar
+#  become: yes
+#  roles:
+#    - sonar
