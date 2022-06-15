@@ -21,7 +21,7 @@
   become: yes
   roles:
     - jenkins
-- hosts: sonar
+- hosts: SONAR
   become: yes
   roles:
     - sonar
