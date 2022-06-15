@@ -7,4 +7,4 @@ git pull ; ansible-playbook roboshop.yml  \
 # -e env var
 # -i inventory
 
- git pull ; ansible-playbook main.yml -t
+ git pull ; ansible-playbook main.yml -t nginx
