@@ -9,6 +9,7 @@
   become: yes
   roles:
     - nginx
+    - nodejs
 
 - name: nodejs internal install with dependencyes
   roles:
