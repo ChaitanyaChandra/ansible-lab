@@ -8,7 +8,7 @@
   roles:
     - nginx
 
-- name: nginx reverse proxy setup for nodejs
+- name: nodejs internal install with dependencyes
   hosts: NODEJS-INTERNAL
   become: yes
   tags: nodejs
