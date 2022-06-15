@@ -1,4 +1,0 @@
-- name: Import NodeJS
-  ansible.builtin.import_role:
-    name: nodejs
-    tasks_from: main

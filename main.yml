@@ -3,13 +3,16 @@
   tags: nginx
   vars:
     - COMPONENT: nodejs
+    - SERVICE: nodejs-internal #  http://nodejs-internal-dev.chaitu.org:8080
+    - ENV: dev
+    - DOMAIN: chaitu.org
   become: yes
   roles:
     - nginx
 
 - name: nodejs internal install with dependencyes
   roles:
-    - node
+    - nodejs
   hosts: NODEJS-INTERNAL
   become: yes
   tags: nodejs
