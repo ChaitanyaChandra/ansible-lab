@@ -6,7 +6,85 @@
   <component name="ChangeListManager">
     <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jenkins.yml" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ec2-launch.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/host_test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jenkins.yml" beforeDir="false" afterPath="$PROJECT_DIR$/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roboshop-pull.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roboshop.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/cart/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/cart/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/cart/templates/systemd.service" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/cart/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/catalogue/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/catalogue/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/catalogue/templates/systemd.service" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/catalogue/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/files/elastic.repo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/tasks/app-user-setup.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/tasks/download.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/tasks/filebeat.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/tasks/golang.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/tasks/maven.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/tasks/nodejs.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/tasks/python.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/tasks/systemd.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/templates/filebeat-orig.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/templates/filebeat.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/common/templates/rsyslog.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/demo/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/dispatch/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/dispatch/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/dispatch/templates/systemd.service" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/dispatch/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/frontend/handlers/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/frontend/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/frontend/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/frontend/templates/nginx.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/frontend/templates/roboshop.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/frontend/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/logstash/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/logstash/templates/logstash.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/mongodb/files/mongo.repo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/mongodb/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/mongodb/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/mongodb/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/mysql/files/mysql.repo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/mysql/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/mysql/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/mysql/templates/root-pass-reset.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/mysql/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/payment/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/payment/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/payment/templates/systemd.service" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/payment/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/prometheus/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/prometheus/templates/alertmanager.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/prometheus/templates/alerts.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/prometheus/templates/appAlerts.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/prometheus/templates/prometheus.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/prometheus/templates/records.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/prometheus/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/rabbitmq/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/rabbitmq/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/rabbitmq/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/redis/files/redis.repo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/redis/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/redis/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/redis/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/shipping/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/shipping/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/shipping/templates/systemd.service" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/shipping/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/user/meta/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/user/tasks/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/user/templates/systemd.service" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/user/vars/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample-vars.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/spot.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +106,7 @@
     <setting file="file://$PROJECT_DIR$/roles/jenkins/tasks/main.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/roles/jenkins/handlers/main.yaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/roles/jenkins/templates/admin_setup.groovy" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/roles/frontend/templates/nginx.conf" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/roles/frontend/templates/roboshop.conf" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/roles/jenkins/templates/plugins.groovy" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/roles/frontend/tasks/main.yml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/roles/jenkins/templates/jenkins.conf" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/roles/jenkins/vars/main.yaml" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -84,6 +159,7 @@
       <workItem from="1653388561735" duration="6328000" />
       <workItem from="1653418678486" duration="64523000" />
       <workItem from="1653731485605" duration="21160000" />
+      <workItem from="1655230939834" duration="4203000" />
     </task>
     <servers />
   </component>
