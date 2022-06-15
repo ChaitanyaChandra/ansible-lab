@@ -8,11 +8,12 @@
     - nginx
 
 - name: nodejs internal install with dependencyes
+  roles:
+    - nodejs
   hosts: NODEJS-INTERNAL
   become: yes
   tags: nodejs
-  roles:
-    - nodejs
+
 #
 #- hosts: WORK-STATION
 #  become: yes
