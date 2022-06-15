@@ -3,7 +3,7 @@ Description = {{COMPONENT}} Service
 After=network.target
 
 [Service]
-User="{{USER}}"
+User={{USER}}
 ExecStart=/bin/node /home/{{USER}}/{{COMPONENT}}/index.js
 SyslogIdentifier="{{COMPONENT}}"
 StandardOutput=/var/log/{{COMPONENT}}/node_logs.log
