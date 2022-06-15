@@ -12,5 +12,4 @@ mkdir -p ./collections/ansible_collections
 ansible-galaxy collection install -r requirements.yml -p ./collections/
 
 ansible-galaxy collection install community.general
-
 git pull ; ansible-playbook main.yml -t nginx
