@@ -9,11 +9,10 @@
   become: yes
   roles:
     - nginx
-    - nodejs
 
 - name: nodejs internal install with dependencyes
-  roles:
-    - nodejs
   hosts: NODEJS-INTERNAL
   become: yes
   tags: nodejs
+  roles:
+    - nodejs
