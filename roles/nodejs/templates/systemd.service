@@ -5,7 +5,8 @@ After=network.target
 [Service]
 User={{USER}}
 ExecStart=/bin/node /home/{{USER}}/{{COMPONENT}}/index.js
-SyslogIdentifier="{{COMPONENT}}"
+SyslogIdentifier={{COMPONENT}}
+WorkingDirectory=/var/www/{{USER}}/{{COMPONENT}}/
 StandardOutput=syslog
 StandardError=syslog
 
