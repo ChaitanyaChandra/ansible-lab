@@ -9,7 +9,6 @@
     - DOMAIN: chaitu.org
   become: yes
   roles:
-    - nodejs
     - nginx
 
 
