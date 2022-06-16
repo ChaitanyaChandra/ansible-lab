@@ -41,7 +41,7 @@
     state: latest
   become: yes
 
-- name: Install Docker
+- name: Install Docker compose
   package:
     name: docker-compose
     state: latest
