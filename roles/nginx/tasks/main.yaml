@@ -1,14 +1,19 @@
 - name: docker community edition and docker compose setup
   import_tasks: docker.yaml
 
-- name:  Copy {{ COMPONENT }} reverse proxy configuration & docker compose file
+- name:  copy Dockerfile & docker-compose file
   become: true
   copy: src={{ item.src }} dest={{ item.dest }}
   with_items:
   - { src: 'Dockerfile' , dest: '/home/centos/{{COMPONENT}}/nginx/' }
   - { src: 'docker-compose.yml' , dest: '/home/centos/{{COMPONENT}}/' }
 
-- name:
+- name: Copy {{ COMPONENT }} reverse proxy configuration
   ansible.builtin.template:
     src: default.conf
     dest: /home/centos/{{COMPONENT}}/nginx/
+
+- name: docker-compose up in baground
+  shell: docker-compose up -d
+  args:
+    chdir: /home/centos/{{COMPONENT}}/
