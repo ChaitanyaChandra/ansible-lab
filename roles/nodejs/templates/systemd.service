@@ -6,7 +6,7 @@ After=network.target
 User={{USER}}
 ExecStart=/bin/node /home/{{USER}}/{{COMPONENT}}/index.js
 SyslogIdentifier={{COMPONENT}}
-WorkingDirectory=/var/www/{{USER}}/{{COMPONENT}}/
+WorkingDirectory=/home/{{USER}}/{{COMPONENT}}/
 StandardOutput=syslog
 StandardError=syslog
 
