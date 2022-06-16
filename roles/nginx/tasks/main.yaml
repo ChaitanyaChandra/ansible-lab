@@ -14,6 +14,6 @@
     dest: /home/centos/{{COMPONENT}}/nginx/
 
 - name: docker-compose up in baground
-  shell: /usr/local/bin/docker-compose up -d
+  shell: /usr/local/bin/docker-compose up -d --build --force-recreate
   args:
     chdir: /home/centos/{{COMPONENT}}/
