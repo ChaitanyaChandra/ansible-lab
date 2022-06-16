@@ -6,7 +6,7 @@
   copy: src={{ item.src }} dest={{ item.dest }}
   with_items:
   - { src: 'Dockerfile' , dest: '/home/{{ansible_user_id}}/{{COMPONENT}}/nginx/' }
-  - { src: 'docker-compose-yml' , dest: '/home/{{ansible_user_id}}/{{COMPONENT}}/' }
+  - { src: 'docker-compose.yml' , dest: '/home/{{ansible_user_id}}/{{COMPONENT}}/' }
 
 - name:
   ansible.builtin.template:
