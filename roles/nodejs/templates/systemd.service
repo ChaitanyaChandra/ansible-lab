@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 User={{USER}}
-ExecStart=/bin/node /home/{{USER}}/{{COMPONENT}}/index.js
+ExecStart=/bin/npm start
 SyslogIdentifier={{COMPONENT}}
 WorkingDirectory=/home/{{USER}}/{{COMPONENT}}/
 StandardOutput=syslog
