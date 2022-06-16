@@ -1,5 +1,5 @@
 - name: docker community edition and docker compose setup
-  import_tasks: docker.yml
+  import_tasks: docker.yaml
 
 - name:  Copy {{ COMPONENT }} reverse proxy configuration & docker compose file
   become: true
