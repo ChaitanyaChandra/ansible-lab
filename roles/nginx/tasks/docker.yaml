@@ -41,11 +41,11 @@
     state: latest
   become: yes
 
-- name: Install Docker compose
-  package:
-    name: docker-compose
-    state: latest
-  become: yes
+- name: Install docker-compose from official github repo
+  get_url:
+    url : https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+    dest: /usr/local/bin/docker-compose
+    mode: 'u+x,g+x'
 
 - name: Start Docker service
   service:
