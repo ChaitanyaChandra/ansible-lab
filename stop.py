@@ -1,5 +1,5 @@
 import boto3
-app = ["mongodb","redis","rabbitmq","mysql","catalogue","user", "cart", "shipping", "payment", "dispatch", "frontend", "work_station", "jenkins"]
+app = ["nodejs-internal", "internet-facing", "jenkins", "work-station", "sonar"]
 region = 'us-east-1'
 res_dict = {}
 
