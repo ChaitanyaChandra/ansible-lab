@@ -5,10 +5,10 @@
   become: true
   copy: src={{ item.src }} dest={{ item.dest }}
   with_items:
-  - { src: 'Dockerfile' , dest: '/home/{{ansible_user_id}}/{{COMPONENT}}/nginx/' }
-  - { src: 'docker-compose.yml' , dest: '/home/{{ansible_user_id}}/{{COMPONENT}}/' }
+  - { src: 'Dockerfile' , dest: '/home/centos/{{COMPONENT}}/nginx/' }
+  - { src: 'docker-compose.yml' , dest: '/home/centos/{{COMPONENT}}/' }
 
 - name:
   ansible.builtin.template:
     src: default.conf
-    dest: /home/{{ansible_user_id}}/{{COMPONENT}}/nginx/
+    dest: /home/centos/{{COMPONENT}}/nginx/
