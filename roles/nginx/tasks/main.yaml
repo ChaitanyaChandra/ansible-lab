@@ -41,6 +41,12 @@
     state: latest
   become: yes
 
+- name: Install Docker
+  package:
+    name: docker-compose
+    state: latest
+  become: yes
+
 - name: Start Docker service
   service:
     name: docker
