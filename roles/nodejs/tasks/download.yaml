@@ -26,5 +26,5 @@
     src: /tmp/{{NEXUS_COMPONENT}}-{{APP_VERSION}}.zip
     dest: /home/{{USER}}/{{NEXUS_COMPONENT}}/
     remote_src: yes
-  become_user: {{USER}}
+  become_user: "{{USER}}"
   when: GIT_DOWNLOAD is not defined
