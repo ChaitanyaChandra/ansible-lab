@@ -1,0 +1,21 @@
+- name: Set Hostname
+  ansible.builtin.shell:  hostnamectl set-hostname {{COMPONENT}}-{{ENV}}
+
+- name: Ensure java is Installed
+  ansible.builtin.yum :
+    name:
+      - java-11-openjdk
+      - git
+      - nginx
+    state: present
+  notify: Enable and Start the Service
+
+- name: current enforce(getenforce) 'Enforcing' changing to 'Permissive'
+  ansible.builtin.shell:
+    cmd: setenforce Permissive
+
+- name: Copy {{COMPONENT}} reverse proxy configuration
+  ansible.builtin.template:
+    src: jenkins.conf
+    dest: /etc/nginx/conf.d/nexus.conf
+  notify: restart nginx Service
