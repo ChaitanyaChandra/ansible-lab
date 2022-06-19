@@ -17,6 +17,7 @@
 - name: current enforce(getenforce) 'Enforcing' changing to 'Permissive'
   ansible.builtin.shell:
     cmd: setenforce Permissive
+  ignore_errors: yes
 
 - name: Copy {{COMPONENT}} reverse proxy configuration
   ansible.builtin.template:
