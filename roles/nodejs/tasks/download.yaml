@@ -1,0 +1,30 @@
+- name: Download and UnZip the {{COMPONENT}} Content
+  ansible.builtin.unarchive:
+    src: https://github.com/ChaitanyaChandra/{{COMPONENT}}/archive/main.zip
+    dest: /tmp
+    remote_src: yes
+  when: GIT_DOWNLOAD is defined
+
+- name: Copy App Content
+  ansible.builtin.copy:
+    src: /tmp/{{COMPONENT}}-main/
+    dest: /home/{{USER}}/{{COMPONENT}}/
+    remote_src: yes
+  become_user: "{{USER}}"
+  when: GIT_DOWNLOAD is defined
+
+- name: Download {{NEXUS_COMPONENT}} from Nexus
+  ansible.builtin.get_url:
+    url: http://nexus-dev.chaitu.org:8081/repository/{{NEXUS_COMPONENT}}/{{NEXUS_COMPONENT}}-{{APP_VERSION}}.zip
+    dest: /tmp
+    username: "{{NEXUS_USERNAME}}"
+    password: "{{NEXUS_PASSWORD}}"
+  when: GIT_DOWNLOAD is not defined
+
+- name: Unzip {{NEXUS_COMPONENT}}
+  ansible.builtin.unarchive:
+    src: /tmp/{{NEXUS_COMPONENT}}-{{APP_VERSION}}.zip
+    dest: /home/{{USER}}/{{NEXUS_COMPONENT}}/
+    remote_src: yes
+  become_user: {{USER}}
+  when: GIT_DOWNLOAD is not defined
