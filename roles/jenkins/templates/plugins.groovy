@@ -17,6 +17,7 @@ final List<String> REQUIRED_PLUGINS = [
        // "authorize-project",  // authorize the groovy scripts
         "ansicolor", // color the output
         "aws-secrets-manager-credentials-provider",
+        "badge", // custom badges in jenkins
 ]
 
 
