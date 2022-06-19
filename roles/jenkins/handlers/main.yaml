@@ -1,7 +1,7 @@
 - name: restart jenkins Service
   ansible.builtin.systemd:
     name: jenkins
-    state: restart
+    state: restarted
   ignore_errors: yes
 
 - name: restart nginx Service
