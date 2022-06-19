@@ -1,6 +1,11 @@
 - name: Set Hostname
   ansible.builtin.shell:  hostnamectl set-hostname {{COMPONENT}}-{{ENV}}
 
+- name: Install EPEL repo
+  yum:
+    name: epel-release
+    state: present
+
 - name: Ensure java is Installed
   ansible.builtin.yum :
     name:
