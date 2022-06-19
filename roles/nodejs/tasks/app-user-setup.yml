@@ -10,6 +10,14 @@
     remote_src: yes
   when: GIT_DOWNLOAD is defined
 
+- name: Download {{NEXUS_COMPONENT}} from Nexus
+  ansible.builtin.get_url:
+    url: http://nexus-dev.chaitu.org:8081/repository/{{NEXUS_COMPONENT}}/{{NEXUS_COMPONENT}}-{{APP_VERSION}}.zip
+    dest: /tmp
+    username: "{{NEXUS_USERNAME}}"
+    password: "{{NEXUS_PASSWORD}}"
+  when: GIT_DOWNLOAD is not defined
+
 ## This is been added for deployment purpose , For first time when component is setup then it might fail, So lets ignore the failure
 - name: Stop {{COMPONENT}} Service
   ansible.builtin.systemd:
