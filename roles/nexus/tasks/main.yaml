@@ -7,7 +7,7 @@
     dest: /tmp/code.sh
 
 - name: install nexus
-  ansible.builtin.shell:  /tmp/code.sh
+  ansible.builtin.shell:  source /tmp/code.sh
 
 - name: Install EPEL repo
   yum:
