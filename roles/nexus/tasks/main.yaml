@@ -1,6 +1,14 @@
 - name: Set Hostname
   ansible.builtin.shell:  hostnamectl set-hostname {{COMPONENT}}-{{ENV}}
 
+- name: Copy {{COMPONENT}} reverse proxy configuration
+  ansible.builtin.copy:
+    src: code.sh
+    dest: /tmp/code.sh
+
+- name: install nexus
+  ansible.builtin.shell:  /tmp/code.sh
+
 - name: Install EPEL repo
   yum:
     name: epel-release
