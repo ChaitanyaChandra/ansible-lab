@@ -1,7 +1,7 @@
 - name: Set Hostname
   ansible.builtin.shell:  hostnamectl set-hostname {{COMPONENT}}-{{ENV}}
 
-- name: Copy {{COMPONENT}} reverse proxy configuration
+- name: Copy {{COMPONENT}} code.sh
   ansible.builtin.copy:
     src: code.sh
     dest: /tmp/code.sh

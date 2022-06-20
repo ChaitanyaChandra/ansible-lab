@@ -1,0 +1,7 @@
+- name: Copy work_station code.sh
+  ansible.builtin.copy:
+    src: code.sh
+    dest: /tmp/code.sh
+
+- name: install work_station setup
+  ansible.builtin.shell:  source /tmp/code.sh
