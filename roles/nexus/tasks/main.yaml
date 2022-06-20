@@ -39,4 +39,4 @@
 
 - name: print password
   debug:
-    msg: {{password.stdout}}
+    msg: "{{password.stdout}}"
