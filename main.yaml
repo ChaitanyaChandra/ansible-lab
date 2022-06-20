@@ -17,3 +17,10 @@
   tags: nodejs
   roles:
     - nodejs
+
+- name: slave setup
+  hosts: WORK-STATION
+  become: yes
+  tags: slave
+  roles:
+    - workstation
