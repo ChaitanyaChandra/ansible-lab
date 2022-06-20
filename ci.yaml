@@ -11,3 +11,10 @@
   become: yes
   roles:
     - nexus
+
+- name: slave setup
+  hosts: WORK-STATION
+  become: yes
+  tags: slave
+  roles:
+    - workstation
