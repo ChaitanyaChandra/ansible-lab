@@ -24,7 +24,7 @@
 - name: Unzip {{NEXUS_COMPONENT}}
   ansible.builtin.unarchive:
     src: /tmp/{{NEXUS_COMPONENT}}-{{APP_VERSION}}.zip
-    dest: /home/{{USER}}/{{NEXUS_COMPONENT}}/
+    dest: /home/{{USER}}/{{COMPONENT}}/
     remote_src: yes
   become_user: "{{USER}}"
   when: GIT_DOWNLOAD is not defined
