@@ -18,6 +18,7 @@
   args:
     chdir: "/home/{{USER}}/{{COMPONENT}}"
   become_user: "{{USER}}"
+  when: GIT_DOWNLOAD is defined
 
 #- name: Install packages based on package.json.
 #  community.general.npm:
