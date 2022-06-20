@@ -1,7 +1,4 @@
 #!/bin/bash
-cd /home/centos
-git clone  https://github.com/ChaitanyaChandra/ansible-lab.git --branch=ansible-nodejs
-
 yum install java-11-openjdk -y
 
 yum install unzip -y
