@@ -3,6 +3,8 @@ yum install java-11-openjdk -y
 
 yum install unzip -y
 
+yum install zip -y
+
 # install sonar
 cd /opt
 curl -O https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.5.0.2216-linux.zip
