@@ -32,3 +32,11 @@
     src: nexus.conf
     dest: /etc/nginx/conf.d/nexus.conf
   notify: restart nginx Service
+
+- name: get password
+  ansible.builtin.shell: cat /home/nexus/sonatype-work/nexus3/admin.password
+  register: password
+
+- name: print password
+  debug:
+    msg: {{password.stdout}}
