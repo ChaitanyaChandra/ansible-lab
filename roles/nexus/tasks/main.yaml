@@ -14,10 +14,9 @@
     name: epel-release
     state: present
 
-- name: Ensure java is Installed
+- name: Ensure nginx is Installed
   ansible.builtin.yum :
     name:
-      - java-11-openjdk
       - git
       - nginx
     state: present
