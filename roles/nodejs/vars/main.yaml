@@ -1,5 +1,5 @@
 USER: node
-# GIT_DOWNLOAD: yes
+GIT_DOWNLOAD: yes
 COMPONENT: spec
 NEXUS_COMPONENT: nodejs
 NEXUS_USERNAME: admin
