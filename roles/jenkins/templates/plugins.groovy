@@ -11,7 +11,7 @@ import hudson.security.*
 
 final List<String> REQUIRED_PLUGINS = [
         "workflow-aggregator",
-        "ws-cleanup",
+        "ws-cleanup", // workspace clean up
         "blueocean",  // for parallel pipeline visualization 
         "job-dsl", // for jobs automation
        // "authorize-project",  // authorize the groovy scripts
