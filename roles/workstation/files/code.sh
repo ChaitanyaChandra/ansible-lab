@@ -29,3 +29,7 @@ mv $FOLDER_NAME nodejs
 ln -s /opt/nodejs/bin/node /bin/node || true
 ln -s /opt/nodejs/bin/npm /bin/npm  || true
 ln -s /opt/nodejs/bin/npx /bin/npx || true
+
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo yum -y install terraform
