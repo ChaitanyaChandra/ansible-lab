@@ -13,6 +13,12 @@
     src: default.conf
     dest: /home/centos/{{COMPONENT}}/nginx/
 
+- name: docker-compose down
+  shell: /usr/local/bin/docker-compose down
+  args:
+    chdir: /home/centos/{{COMPONENT}}/
+  ignore_errors: yes
+
 - name: docker-compose up in baground
   shell: /usr/local/bin/docker-compose up -d --build --force-recreate
   args:
