@@ -1,4 +1,4 @@
-APPS = {{APPS || to_json}}
+APPS = {{APPS | to_json}}
 ENV = {{ENV}}
 DOMAIN = {{DOMAIN}}
 new_list = []
