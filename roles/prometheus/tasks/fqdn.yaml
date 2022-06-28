@@ -9,7 +9,7 @@
     dest: /tmp/code.py
 
 - name: exec python script
-  ansible.builtin.shell: source env.sh ; python3 /tmp/code.py
+  ansible.builtin.shell: source /tmp/env.sh ; python3 /tmp/code.py
   register: fqdn_list
 
 - name: print fqdn list
