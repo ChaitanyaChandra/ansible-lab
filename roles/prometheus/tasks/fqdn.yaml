@@ -5,7 +5,7 @@
   ignore_errors: yes
 
 - name: exec python script
-  ansible.builtin.shell: python /tmp/code.py
+  ansible.builtin.shell: python3 /tmp/code.py
   register: fqdn_list
 
 - name: print fqdn list

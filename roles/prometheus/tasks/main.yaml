@@ -19,6 +19,7 @@
     name:
       - git
       - nginx
+      - python3
     state: present
 
 - name: current enforce(getenforce) 'Enforcing' changing to 'Permissive'
