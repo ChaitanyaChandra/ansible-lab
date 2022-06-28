@@ -1,2 +1,4 @@
 COMPONENT: prometheus
+APPS: ["nodejs-internal", "internet-facing", "jenkins", "work-station", "sonar", "nexus", "pro"]
+DOMAIN: chaitu.org
 ENV: dev

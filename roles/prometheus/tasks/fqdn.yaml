@@ -1,0 +1,17 @@
+- name: copy env template
+  ansible.builtin.template:
+    src: env.sh
+    dest: /tmp/env.sh
+
+- name: Copy python script
+  ansible.builtin.copy:
+    src: code.py
+    dest: /tmp/code.py
+
+- name: exec python script
+  ansible.builtin.shell: source env.sh ; python3 /tmp/code.py
+  register: fqdn_list
+
+- name: print fqdn list
+  debug:
+    msg: "{{fqdn_list.stdout}}"

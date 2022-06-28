@@ -31,3 +31,11 @@
     src: pro.conf
     dest: /etc/nginx/conf.d/pro.conf
   notify: restart nginx Service
+
+- name: docker community edition and docker compose setup
+  import_tasks: fqdn.yaml
+
+- name: Copy {{COMPONENT}} configuration
+  ansible.builtin.template:
+    src: prometheus.yml
+    dest: /opt/prometheus/prometheus.yml

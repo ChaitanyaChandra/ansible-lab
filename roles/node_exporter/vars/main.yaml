@@ -1,2 +1,2 @@
-COMPONENT: prometheus
+COMPONENT: node_exporter
 ENV: dev

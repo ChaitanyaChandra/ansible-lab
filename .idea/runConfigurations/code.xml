@@ -1,8 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="inv" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <configuration default="false" name="code" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
     <envs>
+      <env name="PYTHONUNBUFFERED" value="1" />
       <env name="USER_NAME" value="centos" />
     </envs>
     <option name="SDK_HOME" value="$USER_HOME$/IdeaProjects/boto3/venv/bin/python" />
@@ -12,7 +13,7 @@
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <module name="" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inv.py" />
+    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/roles/prometheus/files/code.py" />
     <option name="PARAMETERS" value="" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
