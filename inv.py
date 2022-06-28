@@ -5,7 +5,7 @@ import os
 os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
 
 route53 = boto3.client('route53')
-app = ["nodejs-internal", "internet-facing", "jenkins", "work-station", "sonar", "nexus"]
+app = ["nodejs-internal", "internet-facing", "jenkins", "work-station", "sonar", "nexus", "pro"]
 env = "dev"
 domain = "chaitu.org."
 new_list = []  # fqdn
