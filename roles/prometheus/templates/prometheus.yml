@@ -29,8 +29,8 @@ scrape_configs:
       - targets: ["localhost:9090"]
   - job_name: "nodes"
     static_configs:
-        (% for mounts in {{ fqdn_list.stdout  }} %)
-        - targets:
-          - {{ mounts }}
-        (% endfor %)
+      {% for i in fqdn_list.stdout %}
+      - targets:
+          - {{ i }}
+      {% endfor %}
       #  - targets: {{ fqdn_list.stdout | to_json }}
