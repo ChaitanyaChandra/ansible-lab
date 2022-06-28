@@ -1,4 +1,4 @@
-APPS = {{ APPS | to_json }}
+APPS = {{ APPS | string }}
 
 ENV = "{{ENV}}"
 DOMAIN = "{{DOMAIN}}"
