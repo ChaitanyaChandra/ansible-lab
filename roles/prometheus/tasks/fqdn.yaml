@@ -1,5 +1,5 @@
-- name: Copy python script
-  ansible.builtin.copy:
+- name: copy python script
+  ansible.builtin.template:
     src: code.py
     dest: /tmp/code.py
 
