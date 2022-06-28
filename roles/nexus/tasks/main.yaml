@@ -35,7 +35,9 @@
 - name: get password
   ansible.builtin.shell: cat /home/nexus/sonatype-work/nexus3/admin.password
   register: password
+  ignore_erros: yes
 
 - name: print password
   debug:
     msg: "{{password.stdout}}"
+  ignore_errors: yes
