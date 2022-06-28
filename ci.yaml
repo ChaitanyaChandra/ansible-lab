@@ -22,6 +22,6 @@
 - name: prometheus setup
   hosts: PRO
   become: yes
-  tags: slave
+  tags: pro
   roles:
     - prometheus
