@@ -1,4 +1,4 @@
-- name: restart nginx Service
+- name: restart prometheus Service
   ansible.builtin.systemd:
-    name: nginx
+    name: prometheus
     state: restarted
