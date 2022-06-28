@@ -29,4 +29,4 @@ scrape_configs:
       - targets: ["localhost:9090"]
   - job_name: "nodes"
     static_configs:
-      - targets: {{ fqdn_list.stdout | first }}
+      - targets: {{ fqdn_list.stdout }}
