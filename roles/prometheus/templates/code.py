@@ -3,8 +3,9 @@ APPS = {{ APPS | to_json }}
 ENV = "{{ENV}}"
 DOMAIN = "{{DOMAIN}}"
 new_list = []
-for APP in APPS:
-    new_list.append(f"{APP}-{ENV}-{DOMAIN}:9100")
+new_list.append("hi")
+# for APP in APPS:
+#     new_list.append(f"{APP}-{ENV}-{DOMAIN}:9100")
 
 print(f"my list is {new_list}")
 append_string = f"""
