@@ -9,6 +9,7 @@
   become: yes
   roles:
     - nginx
+    - node_exporter
 
 
 - name: nodejs internal install with dependencyes
@@ -17,3 +18,4 @@
   tags: nodejs
   roles:
     - nodejs
+    - node_exporter

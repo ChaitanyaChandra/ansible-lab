@@ -2,15 +2,20 @@
   become: yes
   roles:
     - jenkins
+    - node_exporter
+
 - hosts: SONAR
   become: yes
   roles:
     - sonar
+    - node_exporter
+
 - hosts: NEXUS
   tags: nexus
   become: yes
   roles:
     - nexus
+    - node_exporter
 
 - name: slave setup
   hosts: WORK-STATION
@@ -18,6 +23,7 @@
   tags: slave
   roles:
     - workstation
+    - node_exporter
 
 - name: prometheus setup
   hosts: PRO
