@@ -5,11 +5,11 @@ DOMAIN = "{{DOMAIN}}"
 new_list = []
 for APP in APPS:
     new_list.append(f"{APP}-{ENV}-{DOMAIN}:9100")
-append_string = f"""
+append_string = f'''
   - job_name: "nodes"
     static_configs:
       - targets: {new_list}
-"""
+'''
 
 print(append_string)
 
