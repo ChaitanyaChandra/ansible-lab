@@ -3,9 +3,8 @@ APPS = {{ APPS | to_json }}
 ENV = "{{ENV}}"
 DOMAIN = "{{DOMAIN}}"
 new_list = []
-new_list.append("hi")
-# for APP in APPS:
-#     new_list.append(f"{APP}-{ENV}-{DOMAIN}:9100")
+for APP in APPS:
+    new_list.append(f'"{APP}-{ENV}-{DOMAIN}:9100"')
 
 print(f"my list is {new_list}")
 append_string = f"""
@@ -13,8 +12,6 @@ append_string = f"""
     static_configs:
       - targets: {new_list}
 """
-
-
 
 # Open a file with access mode 'a'
 with open("/opt/prometheus/prometheus.yml", "a") as file_object:
