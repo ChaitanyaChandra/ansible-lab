@@ -1,7 +1,7 @@
-- name: Copy {{node_exporter}} code.sh
+- name: Copy {{COMPONENT}} code.sh
   ansible.builtin.copy:
     src: code.sh
     dest: /tmp/code.sh
 
-- name: install {{node_exporter}}
+- name: install {{COMPONENT}}
   ansible.builtin.shell:  source /tmp/code.sh
