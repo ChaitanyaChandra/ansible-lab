@@ -31,6 +31,6 @@ scrape_configs:
     static_configs:
         (% for mounts in {{ fqdn_list.stdout  }} %)
         - targets:
-          - {{ ansible_mounts.mount }}
+          - {{ item }}
         (% endfor %)
       #  - targets: {{ fqdn_list.stdout | to_json }}
