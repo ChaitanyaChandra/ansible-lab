@@ -29,13 +29,5 @@ scrape_configs:
       - targets: ["localhost:9090"]
   - job_name: "nodes"
     static_configs:
-      - targets: [
-                          "nodejs-internal-dev-chaitu.org:9100",
-                          "internet-facing-dev-chaitu.org:9100",
-                          "jenkins-dev-chaitu.org:9100",
-                          "work-station-dev-chaitu.org:9100",
-                          "sonar-dev-chaitu.org:9100",
-                          "nexus-dev-chaitu.org:9100",
-                          "pro-dev-chaitu.org:9100"
-                      ]
-       # - targets: {{ fqdn_list.stdout | to_json }}
+      - targets: ["jenkins-dev.chaitu.org:9100"]
+      #  - targets: {{}} {{ fqdn_list.stdout | to_json }}
