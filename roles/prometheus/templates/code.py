@@ -1,3 +1,4 @@
+import json
 APPS = {{ APPS | to_json }}
 
 ENV = "{{ENV}}"
@@ -6,11 +7,11 @@ new_list = []
 for APP in APPS:
     new_list.append(f'{APP}-{ENV}-{DOMAIN}:9100')
 
-print(f"my list is {new_list}")
+print(f'my list is {json.dumps(new_list)}')
 append_string = f"""
   - job_name: "nodes"
     static_configs:
-      - targets: {new_list}
+      - targets: {json.dumps(new_list)}
 """
 
 # Open a file with access mode 'a'
