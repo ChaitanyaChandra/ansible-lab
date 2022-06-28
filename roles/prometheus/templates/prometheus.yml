@@ -28,6 +28,5 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
   - job_name: "nodes"
-    loop: "{{ SERVICE }}"
     static_configs:
       - targets: {{fqdn_list.stdout}}
