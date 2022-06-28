@@ -11,6 +11,8 @@ append_string = f"""
       - targets: {new_list}
 """
 
+print(append_string)
+
 # Open a file with access mode 'a'
 with open("/opt/prometheus/prometheus.yml", "a") as file_object:
     # Append 'hello' at the end of file
