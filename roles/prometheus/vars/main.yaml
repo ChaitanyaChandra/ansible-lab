@@ -1,0 +1,2 @@
+COMPONENT: prometheus
+ENV: dev

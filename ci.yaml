@@ -18,3 +18,10 @@
   tags: slave
   roles:
     - workstation
+
+- name: prometheus setup
+  hosts: PRO
+  become: yes
+  tags: slave
+  roles:
+    - prometheus
