@@ -18,7 +18,7 @@ res_dict = {}
 response = route53.list_hosted_zones()
 for item in response['HostedZones']:
     # print(item)
-    if item['ResourceRecordSetCount'] > 5 and item['Name'] == domain:
+    if item['Name'] == domain:
         res_dict[item['Name']] = item['Id']
 
 current_dns = {}
