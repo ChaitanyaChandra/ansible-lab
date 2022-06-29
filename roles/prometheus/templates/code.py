@@ -10,6 +10,6 @@ for APP in APPS:
         file_object.write(f"""
   - job_name: "{APP}"
     static_configs:
-      - targets: ["{APP}-{ENV}-{DOMAIN}:9100"]
+      - targets: ["http://{APP}-{ENV}-{DOMAIN}:9100"]
 """)
 print(json.dumps(new_list))
