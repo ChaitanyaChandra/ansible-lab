@@ -37,9 +37,9 @@
   become: true
   template: src={{ item.src }} dest={{ item.dest }}
   with_items:
-  - { src: 'prometheus.yml' , dest: '/opt/prometheus/prometheus.yml' }
+#   - { src: 'prometheus.yml' , dest: '/opt/prometheus/prometheus.yml' }
   - { src: 'first_rules.yml' , dest: '/opt/prometheus/first_rules.yml' }
   notify: restart prometheus Service
 
-- name: docker community edition and docker compose setup
-  import_tasks: fqdn.yaml
+#- name: docker community edition and docker compose setup
+#  import_tasks: fqdn.yaml
