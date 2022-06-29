@@ -6,11 +6,10 @@ DOMAIN = "{{DOMAIN}}"
 new_list = []
 for APP in APPS:
     new_list.append(f'{APP}-{ENV}-{DOMAIN}:9100')
-print(json.dumps(new_list))
-
-with open("/opt/prometheus/prometheus.yml", "a") as file_object:
-    file_object.write(f"""
-  - job_name: "node"
+    with open("/opt/prometheus/prometheus.yml", "a") as file_object:
+        file_object.write(f"""
+  - job_name: "{APP}"
     static_configs:
-      - targets: {json.dumps(new_list)}
+      - targets: ["{APP}-{ENV}.{DOMAIN}:9100"]
 """)
+print(json.dumps(new_list))
