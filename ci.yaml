@@ -32,3 +32,10 @@
   tags: pro
   roles:
     - prometheus
+
+- name: grafana setup on workstation
+  hosts: WORK-STATION
+  become: yes
+  tags: grafana
+  roles:
+    - grafana
