@@ -1,0 +1,5 @@
+groups:
+  - name: custom
+    rules:
+      - record: {{SERVICE}}_used_percent
+        expr: ceil(100 - (100 * node_memory_MemAvailable_bytes /node_memory_MemTotal_bytes))
