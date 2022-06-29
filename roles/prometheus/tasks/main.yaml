@@ -37,7 +37,7 @@
   become: true
   template: src={{ item.src }} dest={{ item.dest }}
   with_items:
-#   - { src: 'prometheus.yml' , dest: '/opt/prometheus/prometheus.yml' }
+   - { src: 'prometheus.yml' , dest: '/opt/prometheus/prometheus.yml' }
   - { src: 'first_rules.yml' , dest: '/opt/prometheus/first_rules.yml' }
   notify: restart prometheus Service
 
