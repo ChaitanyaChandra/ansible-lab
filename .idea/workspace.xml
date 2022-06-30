@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/roles/prometheus/tasks/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/prometheus/tasks/main.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/prometheus/templates/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/prometheus/templates/prometheus.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/prometheus/vars/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/prometheus/vars/main.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
       <workItem from="1653731485605" duration="21160000" />
       <workItem from="1655230939834" duration="61325000" />
       <workItem from="1656379436133" duration="46000" />
-      <workItem from="1656384691431" duration="30456000" />
+      <workItem from="1656384691431" duration="31068000" />
     </task>
     <servers />
   </component>

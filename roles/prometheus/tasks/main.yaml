@@ -1,13 +1,14 @@
 - name: Set Hostname
   ansible.builtin.shell:  hostnamectl set-hostname {{COMPONENT}}-{{ENV}}
 
-- name: Copy {{COMPONENT}} code.sh
-  ansible.builtin.copy:
-    src: code.sh
-    dest: /tmp/code.sh
+- name:  Copy {{COMPONENT}} installation files and alert file
+  copy: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: 'code.sh' , dest: '/tmp/code.sh' }
+    - { src: 'alert.sh' , dest: '/tmp/alert.sh' }
 
 - name: install {{COMPONENT}}
-  ansible.builtin.shell:  source /tmp/code.sh
+  ansible.builtin.shell:  source /tmp/code.sh ; source /temp/alert.sh
 
 - name: Install EPEL repo
   yum:
@@ -34,7 +35,6 @@
   notify: restart nginx Service
 
 - name:  Copy {{COMPONENT}} configuration
-  become: true
   template: src={{ item.src }} dest={{ item.dest }}
   with_items:
     - { src: 'prometheus.yml' , dest: '/opt/prometheus/prometheus.yml' }
