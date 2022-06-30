@@ -16,7 +16,7 @@ groups:
   - name: Instance CPU Alerts
     rules:
       - alert: CpuUsageAlert
-        expr: cpuUsagePercentage > 80
+        expr: {{SERVICE}}_cpu_usage_percent > 80
         for: 2m
         labels:
           severity: critical
@@ -30,7 +30,7 @@ groups:
   - name: Instance Memory Alerts
     rules:
        - alert: MemoryUsageAlert
-         expr: memoryUsagePercentage > 80
+         expr: {{SERVICE}}_memory_used_percent > 80
          for: 2m
          labels:
            severity: critical
@@ -40,4 +40,3 @@ groups:
            summary: {%raw%}"Memory High Usage - IP - [{{ $labels.instance}}], Name - [{{ $labels.instanceName}}]"{%endraw%}
 
            description: {%raw%}"Memory High Usage - IP - [{{ $labels.instance}}], Name - [{{ $labels.instanceName}}]"{%endraw%}
-
