@@ -1,0 +1,15 @@
+groups:
+  - name: {{APP_COMPONENT}} Application Alert
+    rules:
+      - alert: {{APP_COMPONENT}} Application Down
+        expr: node_systemd_unit_state{job="ec2-nodes", name="{{APP_COMPONENT|lower}}.service", state="active"} == 0
+        for: 1m
+        labels:
+          severity: critical
+          type: applicationAlerts
+          kind: serviceAlert
+          appName: {{APP_COMPONENT|lower}}
+        annotations:
+          summary: "{{APP_COMPONENT}} Component Service Down - IP - {%raw%}[{{ $labels.instance}}], Name - [{{ $labels.instanceName}}]"{%endraw%}
+
+          description: "{{APP_COMPONENT}} Component Service Down - IP - {%raw%}[{{ $labels.instance}}], Name - [{{ $labels.instanceName}}]"{%endraw%}

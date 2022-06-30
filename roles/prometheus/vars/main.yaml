@@ -3,3 +3,4 @@ APPS: ["nodejs-internal", "internet-facing", "jenkins", "work-station", "sonar",
 DOMAIN: chaitu.org
 ENV: dev
 SERVICE: chaitu
+APP_COMPONENT: spec
