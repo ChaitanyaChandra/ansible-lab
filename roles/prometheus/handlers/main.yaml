@@ -1,7 +1,8 @@
-- name: restart prometheus Service
-  ansible.builtin.systemd:
-    name: prometheus
-    state: restarted
+- name:  restart prometheus Service
+  ansible.builtin.systemd: name={{ item.service }}  state='restarted'
+  with_items:
+    - { service: 'prometheus' }
+    - { service: 'alertmanager' }
 
 - name: restart nginx Service
   ansible.builtin.systemd:

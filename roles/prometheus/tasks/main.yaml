@@ -41,7 +41,7 @@
     - { src: 'rules.yml' , dest: '/opt/prometheus/rules.yml' }
     - { src: 'alerts.yml' , dest: '/opt/prometheus/alerts.yml' }
     - { src: 'app-alerts.yml' , dest: '/opt/prometheus/app-alerts.yml' }
-    - { src: 'ses.yml' , dest: '/opt/prometheus/ses.yml' }
+    - { src: 'ses.yml' , dest: '/opt/alertmanager/alertmanager.yml' }
 
   notify: restart prometheus Service
 
