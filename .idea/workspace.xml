@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/prometheus/tasks/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/prometheus/tasks/main.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/prometheus/templates/first_rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/prometheus/templates/rules.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roles/prometheus/templates/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/prometheus/templates/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/roles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/roles/prometheus/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
@@ -58,11 +60,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/roles/prometheus/templates" />
       <recent name="$PROJECT_DIR$/roles" />
       <recent name="$PROJECT_DIR$/roles/nginx" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/roles/sonar/templates" />
-      <recent name="$PROJECT_DIR$/roles/jenkins/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/roles/prometheus/templates" />
@@ -87,7 +89,7 @@
       <workItem from="1653731485605" duration="21160000" />
       <workItem from="1655230939834" duration="61325000" />
       <workItem from="1656379436133" duration="46000" />
-      <workItem from="1656384691431" duration="25253000" />
+      <workItem from="1656384691431" duration="29659000" />
     </task>
     <servers />
   </component>

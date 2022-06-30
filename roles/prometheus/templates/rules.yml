@@ -5,3 +5,5 @@ groups:
         expr: ceil(100 - (100 * node_memory_MemAvailable_bytes /node_memory_MemTotal_bytes))
       - record: {{SERVICE}}_cpu_usage_percent
         expr: 100 - (avg by (instanceName) (rate(node_cpu_seconds_total{mode="idle"}[1m]) * 100 ))
+#      - record: {{SERVICE}}_component
+#        expr: up{job = "ec2-nodes", component="${component}"}
