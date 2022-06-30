@@ -8,7 +8,7 @@
     - { src: 'alert.sh' , dest: '/tmp/alert.sh' }
 
 - name: install {{COMPONENT}}
-  ansible.builtin.shell:  source /tmp/code.sh ; source /temp/alert.sh
+  ansible.builtin.shell:  source /tmp/code.sh ; source /tmp/alert.sh
 
 - name: Install EPEL repo
   yum:
