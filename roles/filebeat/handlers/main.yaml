@@ -1,6 +1,7 @@
 - name: restart Service
   systemd:
-    name="{{ item.service }}" state= 'restarted'
+    name: "{{ item.service }}"
+    state: 'restarted'
   with_items:
     - { service: 'filebeat' }
     - { service: 'nginx' }
