@@ -1,0 +1,4 @@
+- name: restart filebeat Service
+  ansible.builtin.systemd:
+    name: filebeat
+    state: restarted
