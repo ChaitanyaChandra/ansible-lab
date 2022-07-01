@@ -1,6 +1,4 @@
-#!/bin/bash
-
-curl -s "https://raw.githubusercontent.com/MajorChowdary/scripts/master/common-functions.sh" >/tmp/common-functions.sh
+curl -s "https://raw.githubusercontent.com/majorchowdary/scripts/master/common-functions.sh" >/tmp/common-functions.sh
 #source /root/scripts/common-functions.sh
 source /tmp/common-functions.sh
 
@@ -52,3 +50,5 @@ output {
 
 systemctl enable logstash &>>/tmp/elastic.log
 systemctl start logstash &>>/tmp/elastic.log
+Stat $? "Start Logstash"
+Stat $? "Start Kibana"
