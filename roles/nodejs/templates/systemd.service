@@ -7,8 +7,9 @@ User={{USER}}
 ExecStart=/bin/npm start
 SyslogIdentifier={{COMPONENT}}
 WorkingDirectory=/home/{{USER}}/{{COMPONENT}}/
-StandardOutput=syslog
-StandardError=syslog
+# StandardOutput=syslog
+# StandardError=syslog
+# Environment=MONGO_URL="mongodb://mongodb-{{ENV}}.roboshop.internal:27017/catalogue"
 
 [Install]
 WantedBy=multi-user.target
