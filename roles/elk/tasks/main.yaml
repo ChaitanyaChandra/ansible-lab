@@ -29,4 +29,4 @@
     dest: /tmp/code.sh
 
 - name: install {{COMPONENT}}
-  ansible.builtin.shell: sudo /tmp/code.sh
+  ansible.builtin.shell: /tmp/code.sh
