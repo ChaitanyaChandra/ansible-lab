@@ -16,6 +16,13 @@
     cmd: setenforce Permissive
   ignore_errors: yes
 
+
+- name: Copy {{COMPONENT}} reverse proxy configuration
+  ansible.builtin.template:
+    src: elk.conf
+    dest: /etc/nginx/conf.d/elk.conf
+  notify: restart nginx Service
+
 - name: Copy {{COMPONENT}} code.sh
   ansible.builtin.copy:
     src: code.sh
@@ -23,9 +30,3 @@
 
 - name: install {{COMPONENT}}
   ansible.builtin.shell:  source /tmp/code.sh
-
-- name: Copy {{COMPONENT}} reverse proxy configuration
-  ansible.builtin.template:
-    src: elk.conf
-    dest: /etc/nginx/conf.d/elk.conf
-  notify: restart nginx Service
