@@ -52,4 +52,4 @@ output {
 systemctl enable logstash &>>/tmp/elastic.log
 systemctl start logstash &>>/tmp/elastic.log
 Stat $? "Start Logstash"
-Stat $? "Start Kibana"
+#Stat $? "Start Kibana"
