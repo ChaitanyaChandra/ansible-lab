@@ -1,0 +1,7 @@
+- name: Copy {{COMPONENT}} code.sh
+  ansible.builtin.copy:
+    src: code.sh
+    dest: /tmp/code.sh
+
+- name: install {{COMPONENT}}
+  ansible.builtin.shell: /tmp/code.sh

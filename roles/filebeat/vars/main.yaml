@@ -1,0 +1,2 @@
+COMPONENT: filebeat
+ENV: dev
