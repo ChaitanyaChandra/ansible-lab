@@ -1,3 +1,21 @@
+- name: Install EPEL repo
+  yum:
+    name: epel-release
+    state: present
+
+- name: Ensure nginx is Installed
+  ansible.builtin.yum :
+    name:
+      - git
+      - nginx
+      - python3
+    state: present
+
+- name: current enforce(getenforce) 'Enforcing' changing to 'Permissive'
+  ansible.builtin.shell:
+    cmd: setenforce Permissive
+  ignore_errors: yes
+
 - name: Copy {{COMPONENT}} code.sh
   ansible.builtin.copy:
     src: code.sh
@@ -5,3 +23,9 @@
 
 - name: install {{COMPONENT}}
   ansible.builtin.shell:  source /tmp/code.sh
+
+- name: Copy {{COMPONENT}} reverse proxy configuration
+  ansible.builtin.template:
+    src: elk.conf
+    dest: /etc/nginx/conf.d/elk.conf
+  notify: restart nginx Service
