@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/elk/files/code.sh" beforeDir="false" afterPath="$PROJECT_DIR$/roles/elk/files/code.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/elk/tasks/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/elk/tasks/main.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +84,7 @@
       <workItem from="1653731485605" duration="21160000" />
       <workItem from="1655230939834" duration="61325000" />
       <workItem from="1656379436133" duration="46000" />
-      <workItem from="1656384691431" duration="34743000" />
+      <workItem from="1656384691431" duration="34957000" />
     </task>
     <servers />
   </component>
