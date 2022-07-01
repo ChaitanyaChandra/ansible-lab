@@ -48,6 +48,7 @@ output {
   }
 }' >/etc/logstash/conf.d/logstash.conf
 
+/usr/share/logstash/bin/system-install /etc/logstash/startup.options systemd
 systemctl enable logstash &>>/tmp/elastic.log
 systemctl start logstash &>>/tmp/elastic.log
 Stat $? "Start Logstash"
