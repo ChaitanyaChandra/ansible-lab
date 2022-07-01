@@ -4,4 +4,3 @@
     state: 'restarted'
   with_items:
     - { service: 'filebeat' }
-    - { service: 'nginx' }
