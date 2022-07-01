@@ -1,7 +1,6 @@
 - name: restart  Service
-  block:
-    systemd:
-      name:
-        - filebeat
-        - nginx
-      state: restarted
+  systemd:
+    name:
+      - filebeat
+      - nginx
+    state: restarted
