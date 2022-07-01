@@ -5,3 +5,8 @@
 
 - name: install {{COMPONENT}}
   ansible.builtin.shell: source /tmp/code.sh
+
+- name: Copy {{COMPONENT}} code.sh
+  ansible.builtin.template:
+    src: filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
