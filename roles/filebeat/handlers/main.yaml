@@ -1,4 +1,4 @@
-- name: restart  Service
+- name: restart Service
   systemd:
     name:
       - filebeat
