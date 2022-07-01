@@ -4,4 +4,4 @@
     dest: /tmp/code.sh
 
 - name: install {{COMPONENT}}
-  ansible.builtin.shell: /tmp/code.sh
+  ansible.builtin.shell: source /tmp/code.sh

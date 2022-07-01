@@ -58,8 +58,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/roles/elk" />
       <recent name="$PROJECT_DIR$/roles" />
+      <recent name="$PROJECT_DIR$/roles/elk" />
       <recent name="$PROJECT_DIR$/roles/prometheus/templates" />
       <recent name="$PROJECT_DIR$/roles/nginx" />
       <recent name="$PROJECT_DIR$" />
