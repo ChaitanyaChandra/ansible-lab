@@ -1,4 +1,7 @@
-- name: restart filebeat Service
-  ansible.builtin.systemd:
-    name: filebeat
-    state: restarted
+- name: restart  Service
+  block:
+    systemd:
+      name:
+        - filebeat
+        - nginx
+      state: restarted
