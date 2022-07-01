@@ -50,15 +50,15 @@ output {
   }
 }' >/etc/logstash/conf.d/logstash.conf
 
-systemctl enable logstash &>>/tmp/elastic.log
-systemctl start logstash &>>/tmp/elastic.log
-Stat $? "Start Logstash"
-
-yum install nginx -y &>/dev/null
-Stat $? "Install Nginx"
-
-
-curl -s https://raw.githubusercontent.com/MajorChowdary/labautomation/master/tools/elk/http-proxy.conf >/etc/nginx/nginx.conf
-systemctl enable nginx
-systemctl start nginx
-Stat $? "Start Kibana"
+#systemctl enable logstash &>>/tmp/elastic.log
+#systemctl start logstash &>>/tmp/elastic.log
+#Stat $? "Start Logstash"
+#
+#yum install nginx -y &>/dev/null
+#Stat $? "Install Nginx"
+#
+#
+#curl -s https://raw.githubusercontent.com/MajorChowdary/labautomation/master/tools/elk/http-proxy.conf >/etc/nginx/nginx.conf
+#systemctl enable nginx
+#systemctl start nginx
+#Stat $? "Start Kibana"
