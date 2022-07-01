@@ -39,3 +39,10 @@
   tags: grafana
   roles:
     - grafana
+
+- name: grafana setup on workstation
+  hosts: ELK
+  become: yes
+  tags: elk
+  roles:
+    - elk
