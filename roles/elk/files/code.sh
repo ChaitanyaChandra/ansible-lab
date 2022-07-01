@@ -12,28 +12,28 @@ gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
 enabled=0
 autorefresh=1
 type=rpm-md' > /etc/yum.repos.d/elastic.repo
-#Stat $? "Setup Yum Repo"
+Stat $? "Setup Yum Repo"
 
 yum install --enablerepo=elasticsearch elasticsearch -y &>>/tmp/elastic.log
-#Stat $? "Install Elasticsearch"
+Stat $? "Install Elasticsearch"
 
 IPADDR=$(hostname -i | awk '{print $NF}')
 sed -i -e "/network.host/ c network.host: 0.0.0.0" -e "/http.port/ c http.port: 9200" -e "/cluster.initial_master_nodes/ c cluster.initial_master_nodes: \[\"${IPADDR}\"\]" /etc/elasticsearch/elasticsearch.yml
 
 systemctl enable elasticsearch &>>/tmp/elastic.log
 systemctl start elasticsearch &>>/tmp/elastic.log
-#Stat $? "Start Elasticsearch"
+Stat $? "Start Elasticsearch"
 
 yum install kibana  --enablerepo=elasticsearch -y &>>/tmp/elastic.log
-#Stat $? "Install Kibana"
+Stat $? "Install Kibana"
 
 systemctl enable kibana &>>/tmp/elastic.log
 systemctl start kibana &>>/tmp/elastic.log
-#Stat $? "Start Kibana"
+Stat $? "Start Kibana"
 
 
 yum install logstash --enablerepo=elasticsearch -y &>>/tmp/elastic.log
-#Stat $? "Install LogStash"
+Stat $? "Install LogStash"
 
 echo 'input {
   beats {
@@ -50,5 +50,5 @@ output {
 
 systemctl enable logstash &>>/tmp/elastic.log
 systemctl start logstash &>>/tmp/elastic.log
-#Stat $? "Start Logstash"
-#Stat $? "Start Kibana"
+Stat $? "Start Logstash"
+Stat $? "Start Kibana"
