@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/main.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/roles/nodejs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/roles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
@@ -57,9 +58,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/roles" />
       <recent name="$PROJECT_DIR$/roles/nodejs" />
       <recent name="$PROJECT_DIR$/roles/filebeat" />
-      <recent name="$PROJECT_DIR$/roles" />
       <recent name="$PROJECT_DIR$/roles/elk" />
       <recent name="$PROJECT_DIR$/roles/prometheus/templates" />
     </key>
@@ -88,7 +89,7 @@
       <workItem from="1655230939834" duration="61325000" />
       <workItem from="1656379436133" duration="46000" />
       <workItem from="1656384691431" duration="36949000" />
-      <workItem from="1656655083645" duration="7617000" />
+      <workItem from="1656655083645" duration="7878000" />
     </task>
     <servers />
   </component>
