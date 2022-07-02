@@ -6,9 +6,8 @@
 - name: install {{COMPONENT}}
   ansible.builtin.shell: source /tmp/code.sh
 
-- name:  Copy {{COMPONENT}} filebeat and rsyslog config
-  template: src={{ item.src }} dest={{ item.dest }}
-  with_items:
-    - { src: 'filebeat.yml' , dest: '/etc/filebeat/filebeat.yml' }
-    - { src: 'rsyslog.conf' , dest: '/etc/rsyslog.d/{{COMPONENT}}.conf' }
+- name: copy {{COMPONENT}} config file
+  ansible.builtin.template:
+    src: filebeat.yml
+    dest: /etc/filebeat/filebeat.yml
   notify: restart Service
