@@ -17,6 +17,8 @@
   hosts: NODEJS-INTERNAL
   become: yes
   tags: nodejs
+  vars:
+    - SERVICE: nginx
   roles:
     - nodejs
     - node_exporter
