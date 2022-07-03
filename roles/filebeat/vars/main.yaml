@@ -1,4 +1,3 @@
 COMPONENT: filebeat
 ENV: dev
 LOGSTASH_HOST: elk-dev.chaitu.org
-SERVICE: spec
