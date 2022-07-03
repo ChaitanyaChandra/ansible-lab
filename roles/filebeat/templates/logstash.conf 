@@ -7,8 +7,8 @@ input {
 output {
   elasticsearch {
     hosts => ["http://localhost:9200"]
-    #index => "%{[fields][componentName]}-%{[fields][env]}-%{+YYYY.MM.dd}"
+    index => "%{[fields][componentName]}-%{[fields][env]}-%{+YYYY.MM.dd}"
     #index => "%{[kubernetes][container][name]}-%{[kubernetes][namespace]}-%{+YYYY-MM-dd}"
-    index => "%{[@metadata][beat]}-%{[@metadata][version]}"
+    #index => "%{[@metadata][beat]}-%{[@metadata][version]}"
   }
 }
