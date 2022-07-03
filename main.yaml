@@ -10,6 +10,7 @@
   roles:
     - nginx
     - node_exporter
+    - filebeat
 
 
 - name: nodejs internal install with dependencyes

@@ -1,25 +1,28 @@
+#- name: docker community edition and docker compose setup
+#  import_tasks: docker.yaml
+#
+#- name:  copy Dockerfile & docker-compose file
+#  become: true
+#  copy: src={{ item.src }} dest={{ item.dest }}
+#  with_items:
+#  - { src: 'Dockerfile' , dest: '/home/centos/{{COMPONENT}}/nginx/' }
+#  - { src: 'docker-compose.yml' , dest: '/home/centos/{{COMPONENT}}/' }
+#
+#- name: Copy {{ COMPONENT }} reverse proxy configuration
+#  ansible.builtin.template:
+#    src: default.conf
+#    dest: /home/centos/{{COMPONENT}}/nginx/
+#
+#- name: docker-compose down
+#  shell: /usr/local/bin/docker-compose down
+#  args:
+#    chdir: /home/centos/{{COMPONENT}}/
+#  ignore_errors: yes
+#
+#- name: docker-compose up in baground
+#  shell: /usr/local/bin/docker-compose up -d --build --force-recreate
+#  args:
+#    chdir: /home/centos/{{COMPONENT}}/
+
 - name: docker community edition and docker compose setup
-  import_tasks: docker.yaml
-
-- name:  copy Dockerfile & docker-compose file
-  become: true
-  copy: src={{ item.src }} dest={{ item.dest }}
-  with_items:
-  - { src: 'Dockerfile' , dest: '/home/centos/{{COMPONENT}}/nginx/' }
-  - { src: 'docker-compose.yml' , dest: '/home/centos/{{COMPONENT}}/' }
-
-- name: Copy {{ COMPONENT }} reverse proxy configuration
-  ansible.builtin.template:
-    src: default.conf
-    dest: /home/centos/{{COMPONENT}}/nginx/
-
-- name: docker-compose down
-  shell: /usr/local/bin/docker-compose down
-  args:
-    chdir: /home/centos/{{COMPONENT}}/
-  ignore_errors: yes
-
-- name: docker-compose up in baground
-  shell: /usr/local/bin/docker-compose up -d --build --force-recreate
-  args:
-    chdir: /home/centos/{{COMPONENT}}/
+  import_tasks: nginx.yaml

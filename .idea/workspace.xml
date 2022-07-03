@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/roles/elk/tasks/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/elk/tasks/main.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/main.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/nginx/tasks/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/nginx/tasks/main.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/nginx/tasks/nginx.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/nginx/tasks/nginx.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/nginx/templates/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/roles/nginx/templates/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roles/nginx/templates/nodejs.conf" beforeDir="false" afterPath="$PROJECT_DIR$/roles/nginx/templates/nodejs.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +70,11 @@
       <recent name="$PROJECT_DIR$/roles/prometheus/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/roles/elk/templates" />
       <recent name="$PROJECT_DIR$/roles/nodejs/templates" />
       <recent name="$PROJECT_DIR$/roles/prometheus/templates" />
       <recent name="$PROJECT_DIR$/roles" />
       <recent name="$PROJECT_DIR$/roles/jenkins/templates" />
-      <recent name="$PROJECT_DIR$/roles/jenkins/tamplates" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -89,7 +94,7 @@
       <workItem from="1655230939834" duration="61325000" />
       <workItem from="1656379436133" duration="46000" />
       <workItem from="1656384691431" duration="36949000" />
-      <workItem from="1656655083645" duration="13654000" />
+      <workItem from="1656655083645" duration="18083000" />
     </task>
     <servers />
   </component>
