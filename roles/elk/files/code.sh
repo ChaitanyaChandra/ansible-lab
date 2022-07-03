@@ -45,7 +45,8 @@ echo 'input {
 output {
   elasticsearch {
     hosts => ["http://localhost:9200"]
-    index => "%{[@metadata][beat]}-%{[@metadata][version]}"
+    index => "%{[fields][componentName]}-%{[fields][env]}-%{+YYYY.MM.dd}"
+    # index => "%{[@metadata][beat]}-%{[@metadata][version]}"
   }
 }' >/etc/logstash/conf.d/logstash.conf
 
