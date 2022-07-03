@@ -16,10 +16,12 @@
 
 - name: Copy {{ COMPONENT }} reverse proxy configuration
   ansible.builtin.template:
-    src: nodejs.conf
-    dest: /etc/nginx/conf.d/nodejs.conf
+    src:  "{{item.file}}"
+    dest: "{{item.dest}}"
+  with_items:
+    - { file: 'nodejs.conf', dest: '/etc/nginx/conf.d/nodejs.conf' }
+    - { file: 'nginx.conf', dest: '/etc/nginx/nginx.conf' }
   notify: restart nginx Service
-
 
 #- name: httpd network on
 #  ansible.builtin.shell:
