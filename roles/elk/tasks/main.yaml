@@ -29,4 +29,12 @@
     dest: /tmp/code.sh
 
 - name: install {{COMPONENT}}
-  ansible.builtin.shell: /tmp/code.sh
+  ansible.builtin.shell: source /tmp/code.sh
+
+- name: copy {{COMPONENT}} config file
+  ansible.builtin.template:
+    src: "{{ item.file }}"
+    dest: "{{item.dest}}"
+  with_items:
+    - { file: 'logstash.conf' , dest: '/etc/logstash/conf.d/logstash.conf'}
+  notify: restart Service

@@ -2,3 +2,10 @@
   ansible.builtin.systemd:
     name: nginx
     state: restarted
+
+- name: restart Service
+  systemd:
+    name: "{{ item.service }}"
+    state: 'restarted'
+  with_items:
+    - { service: 'logstash' }
