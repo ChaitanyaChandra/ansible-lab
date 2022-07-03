@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/main.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/nginx/tasks/main.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/nginx/tasks/main.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/nginx/tasks/nginx.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/roles/nginx/tasks/nginx.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roles/nginx/templates/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/roles/nginx/templates/default.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roles/nginx/templates/nodejs.conf" beforeDir="false" afterPath="$PROJECT_DIR$/roles/nginx/templates/nodejs.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +89,7 @@
       <workItem from="1655230939834" duration="61325000" />
       <workItem from="1656379436133" duration="46000" />
       <workItem from="1656384691431" duration="36949000" />
-      <workItem from="1656655083645" duration="18083000" />
+      <workItem from="1656655083645" duration="18457000" />
     </task>
     <servers />
   </component>
