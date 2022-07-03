@@ -4,7 +4,7 @@
     state: present
 
 - name: Ensure nginx is Installed
-  ansible.builtin.yum :
+  ansible.builtin.yum:
     name:
       - nginx
     state: present
