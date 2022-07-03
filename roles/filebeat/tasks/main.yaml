@@ -8,6 +8,9 @@
 
 - name: copy {{COMPONENT}} config file
   ansible.builtin.template:
-    src: filebeat.yml
-    dest: /etc/filebeat/filebeat.yml
+    src: "{{ item.file }}"
+    dest: "{{item.dest}}"
+  with_items:
+    - { file: 'filebeat.yml' , dest: '/etc/filebeat/filebeat.yml'}
+    - { file: 'logstash.conf' , dest: '/etc/logstash/conf.d/logstash.conf'}
   notify: restart Service
