@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="" />
+    <list default="true" id="0969d022-b97a-4298-9cca-7a2a88542873" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/inv.ini" beforeDir="false" afterPath="$PROJECT_DIR$/hosts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
