@@ -1,6 +1,5 @@
 [Unit]
 Description = {{COMPONENT}} Service
-After=network.target
 
 [Service]
 User={{USER}}
