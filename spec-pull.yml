@@ -1,4 +1,4 @@
-- name: {{COMPONENT}} setup
+- name: chaitu{{COMPONENT}} setup
   hosts: localhost
   become: yes
   roles:
