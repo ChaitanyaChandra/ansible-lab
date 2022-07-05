@@ -8,7 +8,7 @@ SyslogIdentifier={{COMPONENT}}
 WorkingDirectory=/home/{{USER}}/{{COMPONENT}}/
 # StandardOutput=syslog
 # StandardError=syslog
-# Environment=MONGO_ENDPOINT="mongodb://mongodb-{{ENV}}.chaitu.org:27017/login-app-db"
+Environment=MONGO_ENDPOINT="mongodb://mongodb-{{ENV}}.chaitu.org:27017/login-app-db"
 
 [Install]
 WantedBy=multi-user.target

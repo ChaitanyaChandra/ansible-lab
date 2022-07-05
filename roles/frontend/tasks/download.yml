@@ -1,0 +1,34 @@
+- name: when git dwonload is defined
+  block:
+    - name: Download and UnZip the {{COMPONENT}} Content
+      ansible.builtin.unarchive:
+        src: https://github.com/ChaitanyaChandra/{{COMPONENT}}/archive/main.zip
+        dest: /tmp
+        remote_src: yes
+  when: GIT_DOWNLOAD is defined
+
+- name: when GIT_DOWNLOAD is not defined
+  block:
+    - name: Download {{COMPONENT}} from Nexus
+      ansible.builtin.get_url:
+        url: http://nexus-dev.chaitu.org:8081/repository/{{PROJECT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
+        dest: /tmp
+        username: "{{NEXUS_USERNAME}}"
+        password: "{{NEXUS_PASSWORD}}"
+
+    - name: Unzip {{COMPONENT}}
+      ansible.builtin.unarchive:
+        src: /tmp/{{COMPONENT}}-{{APP_VERSION}}.zip
+        dest: /tmp/{{COMPONENT}}-main/
+        remote_src: yes
+      become_user: "{{USER}}"
+  when: GIT_DOWNLOAD is not defined
+
+- name: Copy {{ COMPONENT }} reverse proxy configuration
+  ansible.builtin.copy:
+    src:  "{{item.file}}"
+    dest: "{{item.dest}}"
+  with_items:
+    - { file: '/tmp/{{COMPONENT}}-main/nodejs.conf', dest: '/etc/nginx/conf.d/nodejs.conf' }
+    - { file: '/tmp/{{COMPONENT}}-main/nginx.conf', dest: '/etc/nginx/nginx.conf' }
+  notify: restart nginx Service
