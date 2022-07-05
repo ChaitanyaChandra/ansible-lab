@@ -18,14 +18,14 @@
   block:
     - name: Download {{NEXUS_COMPONENT}} from Nexus
       ansible.builtin.get_url:
-        url: http://nexus-dev.chaitu.org:8081/repository/{{NEXUS_COMPONENT}}/{{NEXUS_COMPONENT}}-{{APP_VERSION}}.zip
+        url: http://nexus-dev.chaitu.org:8081/repository/{{PROJECT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
         dest: /tmp
         username: "{{NEXUS_USERNAME}}"
         password: "{{NEXUS_PASSWORD}}"
 
     - name: Unzip {{NEXUS_COMPONENT}}
       ansible.builtin.unarchive:
-        src: /tmp/{{NEXUS_COMPONENT}}-{{APP_VERSION}}.zip
+        src: /tmp/{{COMPONENT}}-{{APP_VERSION}}.zip
         dest: /home/{{USER}}/{{COMPONENT}}/
         remote_src: yes
       become_user: "{{USER}}"
