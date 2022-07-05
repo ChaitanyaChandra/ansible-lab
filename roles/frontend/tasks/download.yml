@@ -16,6 +16,11 @@
         username: "{{NEXUS_USERNAME}}"
         password: "{{NEXUS_PASSWORD}}"
 
+  - name: Creates directory
+    file:
+      path: /tmp/{{COMPONENT}}-main/
+      state: directory
+
     - name: Unzip {{COMPONENT}}
       ansible.builtin.unarchive:
         src: /tmp/{{COMPONENT}}-{{APP_VERSION}}.zip
