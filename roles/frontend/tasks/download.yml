@@ -21,7 +21,6 @@
         src: /tmp/{{COMPONENT}}-{{APP_VERSION}}.zip
         dest: /tmp/{{COMPONENT}}-main/
         remote_src: yes
-      become_user: "{{USER}}"
   when: GIT_DOWNLOAD is not defined
 
 - name: Copy {{ COMPONENT }} reverse proxy configuration
