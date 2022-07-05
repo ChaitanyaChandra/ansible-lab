@@ -16,14 +16,14 @@
 
 - name: when GIT_DOWNLOAD is not defined
   block:
-    - name: Download {{NEXUS_COMPONENT}} from Nexus
+    - name: Download {{COMPONENT}} from Nexus
       ansible.builtin.get_url:
         url: http://nexus-dev.chaitu.org:8081/repository/{{PROJECT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
         dest: /tmp
         username: "{{NEXUS_USERNAME}}"
         password: "{{NEXUS_PASSWORD}}"
 
-    - name: Unzip {{NEXUS_COMPONENT}}
+    - name: Unzip {{COMPONENT}}
       ansible.builtin.unarchive:
         src: /tmp/{{COMPONENT}}-{{APP_VERSION}}.zip
         dest: /home/{{USER}}/{{COMPONENT}}/
