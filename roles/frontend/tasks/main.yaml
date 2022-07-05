@@ -9,7 +9,6 @@
       - unzip
       - nginx
     state: present
-  notify: Enable and Start the Service
 
 - name: current enforce(getenforce) 'Enforcing' changing to 'Permissive'
   ansible.builtin.shell:
