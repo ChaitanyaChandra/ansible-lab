@@ -5,7 +5,11 @@ yum install unzip -y
 
 yum install zip -y
 
-# install sonar
+# install jq
+yum install epel-release -y
+yum install jq -y
+
+# install sonar scannar
 cd /opt
 curl -O https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.5.0.2216-linux.zip
 unzip sonar-scanner-cli-4.5.0.2216-linux.zip
