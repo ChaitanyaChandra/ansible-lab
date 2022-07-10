@@ -53,9 +53,7 @@ sudo make altinstall
 rm -rf /usr/bin/python3
 rm -rf /bin/python
 ln -s /opt/Python-3.8.12/python /usr/bin/python3
-ln -s /opt/Python-3.8.12/python /bin/python
-alias python3='/usr/bin/python3'
-alias python='/bin/python'
+alias python='/usr/bin/python3'
 cd .. ; sudo rm Python-3.8.12.tgz
 
 
@@ -80,3 +78,5 @@ gpgcheck=1
 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
 EOF
 sudo yum install -y kubectl
+
+curl -s https://get.docker.com/ | bash
