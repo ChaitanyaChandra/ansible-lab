@@ -5,6 +5,8 @@ yum install unzip -y
 
 yum install zip -y
 
+yum install wget -y
+
 # install jq
 yum install epel-release -y
 yum install jq -y
@@ -37,3 +39,44 @@ ln -s /opt/nodejs/bin/npx /bin/npx || true
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
 sudo yum -y install terraform
+
+
+# python3.8 install
+sudo yum -y groupinstall "Development Tools"
+sudo yum install gcc openssl-devel bzip2-devel libffi-devel zlib-devel -y
+cd /opt
+wget https://www.python.org/ftp/python/3.8.12/Python-3.8.12.tgz
+tar xzf Python-3.8.12.tgz
+cd Python-3.8.12
+sudo ./configure --enable-optimizations
+sudo make altinstall
+rm -rf /usr/bin/python3
+rm -rf /bin/python
+ln -s /opt/Python-3.8.12/python /usr/bin/python3
+ln -s /opt/Python-3.8.12/python /bin/python
+alias python3='/usr/bin/python3'
+alias python='/bin/python'
+cd .. ; sudo rm Python-3.8.12.tgz
+
+
+# install aws cli
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+# istall .net
+sudo su -c 'curl https://download.mono-project.com/repo/centos7-stable.repo | tee /etc/yum.repos.d/mono-centos7-stable.repo'
+sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
+sudo yum install -y libgdiplus
+sudo yum install -y dotnet-runtime-3.1
+
+# install kubectl
+cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+EOF
+sudo yum install -y kubectl
