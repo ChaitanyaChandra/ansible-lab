@@ -54,13 +54,13 @@ rm -rf /usr/bin/python3
 rm -rf /bin/python
 ln -s /opt/Python-3.8.12/python /usr/bin/python3
 alias python='/usr/bin/python3'
+python -m pip install --upgrade pip
 cd .. ; sudo rm Python-3.8.12.tgz
 
 
 # install aws cli
-curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-unzip awscli-bundle.zip
-sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+sudo python -m pip install awscli --ignore-installed six
 
 # istall .net for azure devops
 sudo su -c 'curl https://download.mono-project.com/repo/centos7-stable.repo | tee /etc/yum.repos.d/mono-centos7-stable.repo'
@@ -79,4 +79,22 @@ gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cl
 EOF
 sudo yum install -y kubectl
 
+# installing docker
 curl -s https://get.docker.com/ | bash
+sudo systemctl start docker
+usermod -a -G docker centos
+
+# installing helm
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+
+
+# install k9's
+sudo yum install snapd -y
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+
+# bash completion
+sudo yum install -y bash-completion
+echo "source <(kubectl completion bash)" >> ~/.bashrc
